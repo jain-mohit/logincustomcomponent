@@ -41,14 +41,25 @@
     // Create a view and add it to the window.
     viewLogin = [[UIView alloc] initWithFrame: bounds];
     [viewLogin setBackgroundColor: [UIColor yellowColor]];
+    CGRect usernameRect = CGRectMake(36, 143, 249, 30);
+    [self createTextField:&usernameRect];
     
-    [self createTextField];
+    CGRect passwordRect = CGRectMake(36, 189, 249, 30);
+    [self createTextField:&passwordRect];
+    
     
 }
 
 
--(void)createTextField {
-    UITextField *username = [ [UITextField alloc ] initWithFrame:CGRectMake(50, 200, 250, 30) ];
+-(void)createButton:(CGRect *)rect {
+    CGRect myRect = *rect;
+    
+}
+
+-(void)createTextField:(CGRect *)rect {
+    
+    CGRect myRect = *rect;
+    UITextField *username = [ [UITextField alloc ] initWithFrame:myRect];
    
     username.textColor = [UIColor whiteColor];
     username.backgroundColor = [UIColor whiteColor];
