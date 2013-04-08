@@ -23,22 +23,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-/*
--(IBAction)login:(id)sender {
-    [self.view addSubview:detailView];
-}
 
--(IBAction)goBackToLogin:(id)sender {
-    NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-    if(usernameDefault) {
-        username.text = usernameDefault;
-    }
-    else {
-        username.text = @"";
-    }
-    [detailView removeFromSuperview];
-}
-*/
 -(IBAction)save:(id)sender {
     
     NSInteger count = [[NSUserDefaults standardUserDefaults]

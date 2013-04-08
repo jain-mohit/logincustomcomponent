@@ -15,7 +15,7 @@
 @end
 
 @implementation LoginControllerProgram
-@synthesize loginComponent;
+@synthesize loginComponent,detailView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,18 @@
     
     // Perform login functions
     NSLog(@"button called");
+    [loginComponent.view addSubview:detailView];
+}
+
+-(IBAction)goBackToLogin:(id)sender {
+    NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    if(usernameDefault) {
+        loginComponent.username.text = usernameDefault;
+    }
+    else {
+        loginComponent.username.text = @"";
+    }
+    [detailView removeFromSuperview];
 }
 
 - (void)viewDidLoad

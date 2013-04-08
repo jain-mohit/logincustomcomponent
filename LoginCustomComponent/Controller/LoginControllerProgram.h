@@ -13,6 +13,7 @@
 @interface LoginControllerProgram : UIViewController
 
 @property (nonatomic,strong)LoginCustomComponentViewController *loginComponent;
+@property (nonatomic,strong)IBOutlet UIView *detailView;
 
 
 @end
