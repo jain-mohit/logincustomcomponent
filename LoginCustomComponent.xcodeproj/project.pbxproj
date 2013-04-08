@@ -7,48 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370E6576170E42E2003EA1CF /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E6574170E42E2003EA1CF /* buttonOff.png */; };
-		370E6577170E42E2003EA1CF /* buttonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E6575170E42E2003EA1CF /* buttonOn.png */; };
-		370E657A1710A6BC003EA1CF /* LoginCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E65791710A6BC003EA1CF /* LoginCustom.m */; };
-		370E657E17114F3A003EA1CF /* LoginControllerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E657C17114F39003EA1CF /* LoginControllerProgram.m */; };
-		370E657F17114F3A003EA1CF /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */; };
 		37A4F967170E1E73001C5F13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F966170E1E73001C5F13 /* UIKit.framework */; };
 		37A4F969170E1E73001C5F13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F968170E1E73001C5F13 /* Foundation.framework */; };
 		37A4F96B170E1E73001C5F13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */; };
-		37A4F971170E1E73001C5F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37A4F96F170E1E73001C5F13 /* InfoPlist.strings */; };
-		37A4F973170E1E73001C5F13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F972170E1E73001C5F13 /* main.m */; };
 		37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */; };
-		37A4F979170E1E74001C5F13 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A4F978170E1E74001C5F13 /* Default.png */; };
-		37A4F97B170E1E74001C5F13 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A4F97A170E1E74001C5F13 /* Default@2x.png */; };
-		37A4F97D170E1E74001C5F13 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A4F97C170E1E74001C5F13 /* Default-568h@2x.png */; };
-		37A4F980170E1E74001C5F13 /* LoginCustomComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F97F170E1E74001C5F13 /* LoginCustomComponentViewController.m */; };
-		37A4F983170E1E74001C5F13 /* LoginCustomComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A4F981170E1E74001C5F13 /* LoginCustomComponentViewController.xib */; };
+		FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */; };
+		FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */; };
+		FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5617133DD900AB1B55 /* buttonOff.png */; };
+		FA651A5C17133DD900AB1B55 /* buttonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5717133DD900AB1B55 /* buttonOn.png */; };
+		FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */; };
+		FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */; };
+		FA651A6317133DF900AB1B55 /* LoginCustomComponent-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6017133DF900AB1B55 /* LoginCustomComponent-Info.plist */; };
+		FA651A6417133DF900AB1B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A6217133DF900AB1B55 /* main.m */; };
+		FA651A6917133E0B00AB1B55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */; };
+		FA651A6A17133E0B00AB1B55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6717133E0B00AB1B55 /* Default.png */; };
+		FA651A6B17133E0B00AB1B55 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6817133E0B00AB1B55 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		370E6574170E42E2003EA1CF /* buttonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOff.png; sourceTree = "<group>"; };
-		370E6575170E42E2003EA1CF /* buttonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOn.png; sourceTree = "<group>"; };
-		370E65781710A6BC003EA1CF /* LoginCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCustom.h; sourceTree = "<group>"; };
-		370E65791710A6BC003EA1CF /* LoginCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCustom.m; sourceTree = "<group>"; };
-		370E657B17114F39003EA1CF /* LoginControllerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginControllerProgram.h; sourceTree = "<group>"; };
-		370E657C17114F39003EA1CF /* LoginControllerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerProgram.m; sourceTree = "<group>"; };
-		370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
 		37A4F963170E1E73001C5F13 /* LoginCustomComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginCustomComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A4F966170E1E73001C5F13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37A4F968170E1E73001C5F13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		37A4F96E170E1E73001C5F13 /* LoginCustomComponent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LoginCustomComponent-Info.plist"; sourceTree = "<group>"; };
-		37A4F970170E1E73001C5F13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37A4F972170E1E73001C5F13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37A4F974170E1E73001C5F13 /* LoginCustomComponent-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginCustomComponent-Prefix.pch"; sourceTree = "<group>"; };
-		37A4F975170E1E73001C5F13 /* LoginCustomComponentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginCustomComponentAppDelegate.h; sourceTree = "<group>"; };
+		37A4F975170E1E73001C5F13 /* LoginCustomComponentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginCustomComponentAppDelegate.h; path = LoginCustomComponent/LoginCustomComponentAppDelegate.h; sourceTree = "<group>"; };
 		37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LoginCustomComponentAppDelegate.m; path = LoginCustomComponent/LoginCustomComponentAppDelegate.m; sourceTree = "<group>"; };
-		37A4F978170E1E74001C5F13 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		37A4F97A170E1E74001C5F13 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		37A4F97C170E1E74001C5F13 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		37A4F97E170E1E74001C5F13 /* LoginCustomComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginCustomComponentViewController.h; sourceTree = "<group>"; };
-		37A4F97F170E1E74001C5F13 /* LoginCustomComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginCustomComponentViewController.m; sourceTree = "<group>"; };
-		37A4F982170E1E74001C5F13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginCustomComponentViewController.xib; sourceTree = "<group>"; };
+		FA651A4017133AC900AB1B55 /* LoginControllerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginControllerProgram.h; sourceTree = "<group>"; };
+		FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerProgram.m; sourceTree = "<group>"; };
+		FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
+		FA651A5617133DD900AB1B55 /* buttonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOff.png; sourceTree = "<group>"; };
+		FA651A5717133DD900AB1B55 /* buttonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOn.png; sourceTree = "<group>"; };
+		FA651A5817133DD900AB1B55 /* LoginCustomComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCustomComponentViewController.h; sourceTree = "<group>"; };
+		FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCustomComponentViewController.m; sourceTree = "<group>"; };
+		FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCustomComponentViewController.xib; sourceTree = "<group>"; };
+		FA651A6017133DF900AB1B55 /* LoginCustomComponent-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LoginCustomComponent-Info.plist"; path = "LoginCustomComponent/LoginCustomComponent-Info.plist"; sourceTree = "<group>"; };
+		FA651A6117133DF900AB1B55 /* LoginCustomComponent-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoginCustomComponent-Prefix.pch"; path = "LoginCustomComponent/LoginCustomComponent-Prefix.pch"; sourceTree = "<group>"; };
+		FA651A6217133DF900AB1B55 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LoginCustomComponent/main.m; sourceTree = "<group>"; };
+		FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "LoginCustomComponent/Default-568h@2x.png"; sourceTree = "<group>"; };
+		FA651A6717133E0B00AB1B55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = LoginCustomComponent/Default.png; sourceTree = "<group>"; };
+		FA651A6817133E0B00AB1B55 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "LoginCustomComponent/Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +64,11 @@
 		37A4F95A170E1E73001C5F13 = {
 			isa = PBXGroup;
 			children = (
-				37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */,
-				37A4F96C170E1E73001C5F13 /* LoginCustomComponent */,
+				FA651A6517133DFE00AB1B55 /* Resources */,
+				FA651A5F17133DE400AB1B55 /* Supporting Files */,
+				FA651A5517133DD900AB1B55 /* LoginComponent */,
+				FA651A3F17133AC900AB1B55 /* Controller */,
+				FA651A3E171339CC00AB1B55 /* AppDelegate */,
 				37A4F965170E1E73001C5F13 /* Frameworks */,
 				37A4F964170E1E73001C5F13 /* Products */,
 			);
@@ -93,37 +92,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		37A4F96C170E1E73001C5F13 /* LoginCustomComponent */ = {
+		FA651A3E171339CC00AB1B55 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				37A4F975170E1E73001C5F13 /* LoginCustomComponentAppDelegate.h */,
-				37A4F97E170E1E74001C5F13 /* LoginCustomComponentViewController.h */,
-				37A4F97F170E1E74001C5F13 /* LoginCustomComponentViewController.m */,
-				37A4F981170E1E74001C5F13 /* LoginCustomComponentViewController.xib */,
-				37A4F96D170E1E73001C5F13 /* Supporting Files */,
-				370E65781710A6BC003EA1CF /* LoginCustom.h */,
-				370E65791710A6BC003EA1CF /* LoginCustom.m */,
-				370E657B17114F39003EA1CF /* LoginControllerProgram.h */,
-				370E657C17114F39003EA1CF /* LoginControllerProgram.m */,
-				370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */,
+				37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */,
 			);
-			path = LoginCustomComponent;
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		37A4F96D170E1E73001C5F13 /* Supporting Files */ = {
+		FA651A3F17133AC900AB1B55 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				370E6574170E42E2003EA1CF /* buttonOff.png */,
-				370E6575170E42E2003EA1CF /* buttonOn.png */,
-				37A4F96E170E1E73001C5F13 /* LoginCustomComponent-Info.plist */,
-				37A4F96F170E1E73001C5F13 /* InfoPlist.strings */,
-				37A4F972170E1E73001C5F13 /* main.m */,
-				37A4F974170E1E73001C5F13 /* LoginCustomComponent-Prefix.pch */,
-				37A4F978170E1E74001C5F13 /* Default.png */,
-				37A4F97A170E1E74001C5F13 /* Default@2x.png */,
-				37A4F97C170E1E74001C5F13 /* Default-568h@2x.png */,
+				FA651A4017133AC900AB1B55 /* LoginControllerProgram.h */,
+				FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */,
+				FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */,
+			);
+			name = Controller;
+			path = LoginCustomComponent/Controller;
+			sourceTree = "<group>";
+		};
+		FA651A5517133DD900AB1B55 /* LoginComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA651A5617133DD900AB1B55 /* buttonOff.png */,
+				FA651A5717133DD900AB1B55 /* buttonOn.png */,
+				FA651A5817133DD900AB1B55 /* LoginCustomComponentViewController.h */,
+				FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */,
+				FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */,
+			);
+			name = LoginComponent;
+			path = LoginCustomComponent/LoginComponent;
+			sourceTree = "<group>";
+		};
+		FA651A5F17133DE400AB1B55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA651A6017133DF900AB1B55 /* LoginCustomComponent-Info.plist */,
+				FA651A6117133DF900AB1B55 /* LoginCustomComponent-Prefix.pch */,
+				FA651A6217133DF900AB1B55 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA651A6517133DFE00AB1B55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */,
+				FA651A6717133E0B00AB1B55 /* Default.png */,
+				FA651A6817133E0B00AB1B55 /* Default@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,14 +197,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A4F971170E1E73001C5F13 /* InfoPlist.strings in Resources */,
-				37A4F979170E1E74001C5F13 /* Default.png in Resources */,
-				37A4F97B170E1E74001C5F13 /* Default@2x.png in Resources */,
-				37A4F97D170E1E74001C5F13 /* Default-568h@2x.png in Resources */,
-				37A4F983170E1E74001C5F13 /* LoginCustomComponentViewController.xib in Resources */,
-				370E6576170E42E2003EA1CF /* buttonOff.png in Resources */,
-				370E6577170E42E2003EA1CF /* buttonOn.png in Resources */,
-				370E657F17114F3A003EA1CF /* LoginControllerProgram.xib in Resources */,
+				FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */,
+				FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */,
+				FA651A5C17133DD900AB1B55 /* buttonOn.png in Resources */,
+				FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */,
+				FA651A6317133DF900AB1B55 /* LoginCustomComponent-Info.plist in Resources */,
+				FA651A6917133E0B00AB1B55 /* Default-568h@2x.png in Resources */,
+				FA651A6A17133E0B00AB1B55 /* Default.png in Resources */,
+				FA651A6B17133E0B00AB1B55 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,34 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A4F973170E1E73001C5F13 /* main.m in Sources */,
 				37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */,
-				37A4F980170E1E74001C5F13 /* LoginCustomComponentViewController.m in Sources */,
-				370E657A1710A6BC003EA1CF /* LoginCustom.m in Sources */,
-				370E657E17114F3A003EA1CF /* LoginControllerProgram.m in Sources */,
+				FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */,
+				FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */,
+				FA651A6417133DF900AB1B55 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		37A4F96F170E1E73001C5F13 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37A4F970170E1E73001C5F13 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		37A4F981170E1E74001C5F13 /* LoginCustomComponentViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37A4F982170E1E74001C5F13 /* en */,
-			);
-			name = LoginCustomComponentViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		37A4F984170E1E74001C5F13 /* Debug */ = {

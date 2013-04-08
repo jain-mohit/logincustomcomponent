@@ -7,15 +7,15 @@
 //
 
 #import "LoginControllerProgram.h"
-#import "LoginCustom.h"
 #import "LoginCustomComponentAppDelegate.h"
+#import "LoginCustomComponentViewController.h"
 
 @interface LoginControllerProgram ()
 
 @end
 
 @implementation LoginControllerProgram
-@synthesize login;
+@synthesize loginComponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,25 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setup];
+    loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+    [self.view addSubview:loginComponent.view];
     // Do any additional setup after loading the view from its nib.
 }
 
 
--(void)setup {
-    login = [[LoginCustom alloc]initWithFrame:CGRectMake(0, 0, 320, 578)];
-    //login.backgroundColor = [UIColor redColor];
-   [self.view addSubview:login.viewLogin];
-    
-  //  self.view = login;
-    
-//    LoginCustomComponentAppDelegate *app = (LoginCustomComponentAppDelegate*)[[UIApplication sharedApplication] delegate];
-//    // Window bounds.
-//    CGRect bounds = app.window.bounds;
-//    UIView *viewl = [[UIView alloc] initWithFrame: bounds];
-//    [viewl setBackgroundColor: [UIColor yellowColor]];
-//    [self.view addSubview:viewl];
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -7,8 +7,6 @@
 //
 
 #import "LoginCustomComponentAppDelegate.h"
-
-#import "LoginCustomComponentViewController.h"
 #import "LoginControllerProgram.h"
 
 @implementation LoginCustomComponentAppDelegate
@@ -17,7 +15,6 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-//    self.viewController = [[LoginCustomComponentViewController alloc] initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
     self.viewController = [[LoginControllerProgram alloc] initWithNibName:@"LoginControllerProgram" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

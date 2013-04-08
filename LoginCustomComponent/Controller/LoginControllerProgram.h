@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginCustom.h"
+
+@class LoginCustomComponentViewController;
 
 @interface LoginControllerProgram : UIViewController
 
-@property (nonatomic,strong)LoginCustom *login;
+@property (nonatomic,strong)LoginCustomComponentViewController *loginComponent;
 
 @end
