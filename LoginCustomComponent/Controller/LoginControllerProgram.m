@@ -26,13 +26,25 @@
     return self;
 }
 
-
+-(void)login:(id)sender {
+    
+    // Perform login functions
+    NSLog(@"button called");
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
     [self.view addSubview:loginComponent.view];
+    
+    [loginComponent.loginButton addTarget:self
+                             action:@selector(login:)
+       forControlEvents:UIControlEventTouchUpInside];
+    
+    //Edit UI element properties as required
+    //Example:
+    //loginComponent.username.textColor = [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
 }
 

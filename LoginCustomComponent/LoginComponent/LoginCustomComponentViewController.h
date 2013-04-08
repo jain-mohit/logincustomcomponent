@@ -14,7 +14,7 @@
 @property(nonatomic,strong)IBOutlet UIButton *usernameButton;
 @property(nonatomic,strong)IBOutlet UIButton *passwordButton;
 @property(nonatomic,strong)IBOutlet UIView *detailView;
-@property(nonatomic,strong)IBOutlet UIButton *login;
+@property(nonatomic,strong)IBOutlet UIButton *loginButton;
 
 
 

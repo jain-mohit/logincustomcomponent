@@ -13,7 +13,7 @@
 @end
 
 @implementation LoginCustomComponentViewController
-@synthesize password,username,usernameButton,passwordButton,detailView,login;
+@synthesize password,username,usernameButton,passwordButton,detailView,loginButton;
 
 - (void)viewDidLoad
 {
@@ -23,7 +23,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-
+/*
 -(IBAction)login:(id)sender {
     [self.view addSubview:detailView];
 }
@@ -38,7 +38,7 @@
     }
     [detailView removeFromSuperview];
 }
-
+*/
 -(IBAction)save:(id)sender {
     
     NSInteger count = [[NSUserDefaults standardUserDefaults]
