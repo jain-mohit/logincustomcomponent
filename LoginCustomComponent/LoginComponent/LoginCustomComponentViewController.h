@@ -9,10 +9,10 @@
 
 @interface LoginCustomComponentViewController : UIViewController
 
-@property(nonatomic,strong)IBOutlet UITextField *username;
-@property(nonatomic,strong)IBOutlet UITextField *password;
-@property(nonatomic,strong)IBOutlet UIButton *usernameButton;
-@property(nonatomic,strong)IBOutlet UIButton *passwordButton;
+@property(nonatomic,strong)IBOutlet UITextField *usernameTextField;
+@property(nonatomic,strong)IBOutlet UITextField *passwordTextField;
+@property(nonatomic,strong)IBOutlet UIButton *usernameSaveButton;
+@property(nonatomic,strong)IBOutlet UIButton *passwordSaveButton;
 @property(nonatomic,strong)IBOutlet UIView *detailView;
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
 

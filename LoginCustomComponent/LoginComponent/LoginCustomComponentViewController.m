@@ -13,12 +13,11 @@
 @end
 
 @implementation LoginCustomComponentViewController
-@synthesize password,username,usernameButton,passwordButton,detailView,loginButton;
+@synthesize passwordSaveButton,usernameSaveButton,usernameTextField,passwordTextField,detailView,loginButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self setup];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -30,17 +29,17 @@
                        integerForKey:@"count"];
     if(!(count%2)) {
         NSUserDefaults *usernameDefault = [NSUserDefaults standardUserDefaults];
-        [usernameDefault setObject:username.text forKey:@"username"];
+        [usernameDefault setObject:usernameTextField.text forKey:@"username"];
         
-        [usernameButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-        [usernameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
+        [usernameSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     else {
         NSUserDefaults *usernameDefault = [NSUserDefaults standardUserDefaults];
         [usernameDefault removeObjectForKey:@"username"];
         
-        [usernameButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [usernameButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
+        [usernameSaveButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
     }
     count++;
@@ -68,14 +67,14 @@
     
     NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
     if(usernameDefault) {
-        username.text = usernameDefault;
-        [usernameButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-        [usernameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        usernameTextField.text = usernameDefault;
+        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
+        [usernameSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     else {
-        username.text = @"";
-        [usernameButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [usernameButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        usernameTextField.text = @"";
+        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
+        [usernameSaveButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
 }
 

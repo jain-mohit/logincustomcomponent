@@ -36,10 +36,10 @@
 -(IBAction)goBackToLogin:(id)sender {
     NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
     if(usernameDefault) {
-        loginComponent.username.text = usernameDefault;
+        loginComponent.usernameTextField.text = usernameDefault;
     }
     else {
-        loginComponent.username.text = @"";
+        loginComponent.usernameTextField.text = @"";
     }
     [detailView removeFromSuperview];
 }
@@ -54,7 +54,7 @@
                              action:@selector(login:)
        forControlEvents:UIControlEventTouchUpInside];
     
-    //Edit UI element properties as required
+    //Edit UI element properties as required or add more UI view on top of loginComponent
     //Example:
     //loginComponent.username.textColor = [UIColor redColor];
     // Do any additional setup after loading the view from its nib.
