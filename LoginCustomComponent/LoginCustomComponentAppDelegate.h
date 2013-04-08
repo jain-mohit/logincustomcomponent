@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class LoginCustomComponentViewController;
+//@class LoginCustomComponentViewController;
+@class LoginControllerProgram;
 
 @interface LoginCustomComponentAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) LoginCustomComponentViewController *viewController;
+//@property (strong, nonatomic) LoginCustomComponentViewController *viewController;
+@property (strong, nonatomic) LoginControllerProgram *viewController;
 
 @end

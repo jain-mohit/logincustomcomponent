@@ -17,9 +17,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self createView];
     }
     return self;
 }
+
+//-(id)initWithCoder:(NSCoder *)aDecoder {
+//    LoginCustomComponentAppDelegate *app = (LoginCustomComponentAppDelegate*)[[UIApplication sharedApplication] delegate];
+//    // Window bounds.
+//    CGRect bounds = app.window.bounds;
+//    
+//    // Create a view and add it to the window.
+//    viewLogin = [[UIView alloc] initWithFrame: bounds];
+//    [viewLogin setBackgroundColor: [UIColor yellowColor]];
+//    return self;
+//}
 
 -(void)createView {
     LoginCustomComponentAppDelegate *app = (LoginCustomComponentAppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -27,8 +39,22 @@
     CGRect bounds = app.window.bounds;
     
     // Create a view and add it to the window.
-    UIView* view = [[UIView alloc] initWithFrame: bounds];
-    [view setBackgroundColor: [UIColor yellowColor]];
+    viewLogin = [[UIView alloc] initWithFrame: bounds];
+    [viewLogin setBackgroundColor: [UIColor yellowColor]];
+    
+    [self createTextField];
+    
+}
+
+
+-(void)createTextField {
+    UITextField *username = [ [UITextField alloc ] initWithFrame:CGRectMake(50, 200, 250, 30) ];
+   
+    username.textColor = [UIColor whiteColor];
+    username.backgroundColor = [UIColor whiteColor];
+    username.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(36.0)];
+    [viewLogin addSubview:username];
+    
 }
 /*
 // Only override drawRect: if you perform custom drawing.

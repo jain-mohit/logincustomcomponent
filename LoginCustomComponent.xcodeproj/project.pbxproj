@@ -10,6 +10,8 @@
 		370E6576170E42E2003EA1CF /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E6574170E42E2003EA1CF /* buttonOff.png */; };
 		370E6577170E42E2003EA1CF /* buttonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 370E6575170E42E2003EA1CF /* buttonOn.png */; };
 		370E657A1710A6BC003EA1CF /* LoginCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E65791710A6BC003EA1CF /* LoginCustom.m */; };
+		370E657E17114F3A003EA1CF /* LoginControllerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E657C17114F39003EA1CF /* LoginControllerProgram.m */; };
+		370E657F17114F3A003EA1CF /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */; };
 		37A4F967170E1E73001C5F13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F966170E1E73001C5F13 /* UIKit.framework */; };
 		37A4F969170E1E73001C5F13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F968170E1E73001C5F13 /* Foundation.framework */; };
 		37A4F96B170E1E73001C5F13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */; };
@@ -28,6 +30,9 @@
 		370E6575170E42E2003EA1CF /* buttonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOn.png; sourceTree = "<group>"; };
 		370E65781710A6BC003EA1CF /* LoginCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCustom.h; sourceTree = "<group>"; };
 		370E65791710A6BC003EA1CF /* LoginCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCustom.m; sourceTree = "<group>"; };
+		370E657B17114F39003EA1CF /* LoginControllerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginControllerProgram.h; sourceTree = "<group>"; };
+		370E657C17114F39003EA1CF /* LoginControllerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerProgram.m; sourceTree = "<group>"; };
+		370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
 		37A4F963170E1E73001C5F13 /* LoginCustomComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginCustomComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A4F966170E1E73001C5F13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37A4F968170E1E73001C5F13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +103,9 @@
 				37A4F96D170E1E73001C5F13 /* Supporting Files */,
 				370E65781710A6BC003EA1CF /* LoginCustom.h */,
 				370E65791710A6BC003EA1CF /* LoginCustom.m */,
+				370E657B17114F39003EA1CF /* LoginControllerProgram.h */,
+				370E657C17114F39003EA1CF /* LoginControllerProgram.m */,
+				370E657D17114F3A003EA1CF /* LoginControllerProgram.xib */,
 			);
 			path = LoginCustomComponent;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				37A4F983170E1E74001C5F13 /* LoginCustomComponentViewController.xib in Resources */,
 				370E6576170E42E2003EA1CF /* buttonOff.png in Resources */,
 				370E6577170E42E2003EA1CF /* buttonOn.png in Resources */,
+				370E657F17114F3A003EA1CF /* LoginControllerProgram.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +200,7 @@
 				37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */,
 				37A4F980170E1E74001C5F13 /* LoginCustomComponentViewController.m in Sources */,
 				370E657A1710A6BC003EA1CF /* LoginCustom.m in Sources */,
+				370E657E17114F3A003EA1CF /* LoginControllerProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
