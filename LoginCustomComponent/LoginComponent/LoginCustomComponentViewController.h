@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginCustomComponentViewController : UIViewController
+@interface LoginCustomComponentViewController : UIViewController <UITextFieldDelegate> {
+    UIColor *customDarkBlue;
+}
 
 @property(nonatomic,strong)IBOutlet UITextField *usernameTextField;
 @property(nonatomic,strong)IBOutlet UITextField *passwordTextField;
@@ -16,6 +18,6 @@
 @property(nonatomic,strong)IBOutlet UIView *detailView;
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
 
-
+-(void)reload;
 
 @end

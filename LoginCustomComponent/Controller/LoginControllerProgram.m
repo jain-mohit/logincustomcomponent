@@ -28,6 +28,7 @@
 
 -(void)login:(id)sender {
     
+    [loginComponent reload];
     // Perform login functions
     NSLog(@"button called");
     [loginComponent.view addSubview:detailView];
