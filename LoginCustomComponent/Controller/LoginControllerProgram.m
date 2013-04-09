@@ -33,13 +33,6 @@
 }
 
 -(IBAction)goBackToLogin:(id)sender {
-//    NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-//    if(usernameDefault) {
-//        loginComponent.usernameTextField.text = usernameDefault;
-//    }
-//    else {
-//        //loginComponent.usernameTextField.text = @"";
-//    }
     [detailView removeFromSuperview];
 }
 

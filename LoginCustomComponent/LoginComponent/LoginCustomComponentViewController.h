@@ -18,6 +18,5 @@
 @property(nonatomic,strong)IBOutlet UIView *detailView;
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
 
--(void)reload;
 
 @end

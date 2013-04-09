@@ -30,7 +30,7 @@
     [self save:@"password" counter:@"countPassword"];
 }
 
-
+// Reloads settings from NSUserdefaults 
 -(void)viewWillLayoutSubviews {
     [self loadSavedCredentials:@"username"];
     [self loadSavedCredentials:@"password"];
@@ -87,7 +87,7 @@
     
 }
 
-
+// This is to setup the userdefault keys - 
 -(void)setup {
     
     customDarkBlue = [UIColor colorWithRed:50.0f/255 green:79.0f/255 blue:133.0f/255 alpha:1.0f];
@@ -108,6 +108,8 @@
     
 }
 
+
+// Method will hide the keyboard when return key is pressed
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [usernameTextField resignFirstResponder];
     [passwordTextField resignFirstResponder];
@@ -115,18 +117,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    
     [self loadSavedCredentials:@"username"];
     [self loadSavedCredentials:@"password"];
 }
 
--(void)reload{
-    
-    [self loadSavedCredentials:@"username"];
-    [self loadSavedCredentials:@"password"];
-}
-
-
+// This method is used to load the settings from the saved NSUserdefaults
 -(void)loadSavedCredentials: (NSString*)field {
     NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:field];
     if(usernameDefault) {
