@@ -13,7 +13,8 @@
 @end
 
 @implementation LoginCustomComponentViewController
-@synthesize passwordSaveButton,usernameSaveButton,usernameTextField,passwordTextField,detailView,loginButton;
+@synthesize passwordSaveButton,usernameSaveButton,usernameTextField,passwordTextField,detailView;
+@synthesize errorMessage, loginButton;
 
 - (void)viewDidLoad
 {

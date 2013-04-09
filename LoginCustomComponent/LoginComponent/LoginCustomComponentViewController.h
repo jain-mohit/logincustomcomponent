@@ -17,6 +17,7 @@
 @property(nonatomic,strong)IBOutlet UIButton *passwordSaveButton;
 @property(nonatomic,strong)IBOutlet UIView *detailView;
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
+@property(nonatomic,strong)IBOutlet UILabel *errorMessage;
 
 
 @end

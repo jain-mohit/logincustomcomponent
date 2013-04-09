@@ -29,7 +29,14 @@
 -(void)login:(id)sender {
     
     // Perform login functions
+    
+    //Validation
+    if([loginComponent.usernameTextField.text isEqualToString:@""] || [loginComponent.passwordTextField.text isEqualToString:@""]) {
+        loginComponent.errorMessage.text = @"You cannot log in with the provided credentials.";
+    }
+    else {
     [loginComponent.view addSubview:detailView];
+    }
 }
 
 -(IBAction)goBackToLogin:(id)sender {
