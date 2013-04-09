@@ -28,22 +28,22 @@
 
 -(void)login:(id)sender {
     
-    [loginComponent reload];
     // Perform login functions
-    NSLog(@"button called");
     [loginComponent.view addSubview:detailView];
 }
 
 -(IBAction)goBackToLogin:(id)sender {
-    NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-    if(usernameDefault) {
-        loginComponent.usernameTextField.text = usernameDefault;
-    }
-    else {
-        loginComponent.usernameTextField.text = @"";
-    }
+//    NSString *usernameDefault = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+//    if(usernameDefault) {
+//        loginComponent.usernameTextField.text = usernameDefault;
+//    }
+//    else {
+//        //loginComponent.usernameTextField.text = @"";
+//    }
     [detailView removeFromSuperview];
 }
+
+
 
 - (void)viewDidLoad
 {

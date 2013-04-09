@@ -30,15 +30,12 @@
     [self save:@"password" counter:@"countPassword"];
 }
 
--(void)willRemoveSubview:(UIView *)subview{
-    
-    //you could do some stuff here too
+
+-(void)viewWillLayoutSubviews {
+    [self loadSavedCredentials:@"username"];
+    [self loadSavedCredentials:@"password"];
 }
 
-
--(void)removeFromParentViewController {
-    
-}
 -(void)save: (NSString*)field counter:(NSString*)countString {
     
     NSInteger count = [[NSUserDefaults standardUserDefaults]
@@ -90,32 +87,6 @@
     
 }
 
-
-//
-//-(IBAction)save:(id)sender {
-//
-//    NSInteger count = [[NSUserDefaults standardUserDefaults]
-//                       integerForKey:@"count"];
-//    if(!(count%2)) {
-//        NSUserDefaults *usernameDefault = [NSUserDefaults standardUserDefaults];
-//        [usernameDefault setObject:usernameTextField.text forKey:@"username"];
-//
-//        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-//        [usernameSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    }
-//    else {
-//        NSUserDefaults *usernameDefault = [NSUserDefaults standardUserDefaults];
-//        [usernameDefault removeObjectForKey:@"username"];
-//
-//        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-//        [usernameSaveButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//
-//    }
-//    count++;
-//    NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
-//    [countDefault setInteger:count forKey:@"count"];
-//
-//}
 
 -(void)setup {
     
