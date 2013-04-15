@@ -32,7 +32,7 @@
     
     //Validation
     if([loginComponent.usernameTextField.text isEqualToString:@""] || [loginComponent.passwordTextField.text isEqualToString:@""]) {
-        loginComponent.errorMessage.text = @"You cannot log in with the provided credentials.";
+        loginComponent.errorMessage.text = @"You cannot log in with the null credentials.";
     }
     else {
     [loginComponent.view addSubview:detailView];

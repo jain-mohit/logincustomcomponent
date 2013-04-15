@@ -67,7 +67,7 @@
 				FA651A6517133DFE00AB1B55 /* Resources */,
 				FA651A5F17133DE400AB1B55 /* Supporting Files */,
 				FA651A5517133DD900AB1B55 /* LoginComponent */,
-				FA651A3F17133AC900AB1B55 /* Controller */,
+				FA651A3F17133AC900AB1B55 /* Demo - Controller */,
 				FA651A3E171339CC00AB1B55 /* AppDelegate */,
 				37A4F965170E1E73001C5F13 /* Frameworks */,
 				37A4F964170E1E73001C5F13 /* Products */,
@@ -101,14 +101,14 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		FA651A3F17133AC900AB1B55 /* Controller */ = {
+		FA651A3F17133AC900AB1B55 /* Demo - Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FA651A4017133AC900AB1B55 /* LoginControllerProgram.h */,
 				FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */,
 				FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */,
 			);
-			name = Controller;
+			name = "Demo - Controller";
 			path = LoginCustomComponent/Controller;
 			sourceTree = "<group>";
 		};
