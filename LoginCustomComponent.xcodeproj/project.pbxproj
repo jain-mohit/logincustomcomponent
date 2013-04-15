@@ -63,11 +63,11 @@
 		37A4F95A170E1E73001C5F13 = {
 			isa = PBXGroup;
 			children = (
+				FA651A3F17133AC900AB1B55 /* Demo - Controller */,
+				FA651A5517133DD900AB1B55 /* LoginComponent */,
+				FA651A3E171339CC00AB1B55 /* AppDelegate */,
 				FA651A6517133DFE00AB1B55 /* Resources */,
 				FA651A5F17133DE400AB1B55 /* Supporting Files */,
-				FA651A5517133DD900AB1B55 /* LoginComponent */,
-				FA651A3F17133AC900AB1B55 /* Demo - Controller */,
-				FA651A3E171339CC00AB1B55 /* AppDelegate */,
 				37A4F965170E1E73001C5F13 /* Frameworks */,
 				37A4F964170E1E73001C5F13 /* Products */,
 			);
