@@ -29,15 +29,13 @@ How to use?
      Your Login Controller.h:
 
      @class LoginCustomComponentViewController;
-
+     
      @property (nonatomic,strong)LoginCustomComponentViewController *loginComponent;
 
 
       2) Login Controller.m:
 
-
       #import "LoginCustomComponentViewController.h"
-
 
      - (void)viewDidLoad
     {
@@ -56,18 +54,15 @@ How to use?
     }
 
 
-
-
-
 Customization:
 ------------
 
-You can customize the login view, labels , buttons , images as per your requirement. 
+    You can customize the login view, labels , buttons , images as per your requirement. 
 
-Example:
-loginComponent.username.textColor = [UIColor redColor];
+    Example:
+    loginComponent.username.textColor = [UIColor redColor];
 
-Demo project included for reference
+Demo project: included for reference
 ------------
 
 Video:
