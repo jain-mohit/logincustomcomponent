@@ -1,65 +1,81 @@
-Readme:
+LoginCustom Component
+================
 
 Description:
+------------
 
 LoginCustomComponent is a stand alone component which is used to save user's credentials based on user's need and choice. 
 It allows user to save or unsave username and/or password in login screen. Credentials will be retained (if saved) even when application is 
 killed and restarted. It is similar to the option of checkmark (to remember credentials) we have on websites.  
 
+
+![Screen1](./demo-screenshots/Screen1.png "Custom Login Screen")
+![Screen2](./demo-screenshots/Screen2.png "After entering credentials")
+![Screen3](./demo-screenshots/Screen3.png "After tapping on save button for credentials. Screen will reatin crentials even when app is killed, restarted and/or viewed again")
+
+
 Relevant Files:
+------------
 
 You need the LoginCustomComponentViewController.h, LoginCustomComponentViewController.m and LoginCustomComponentViewController.xib
 files. You can either use buttonOff.png and buttonOn.png or use your own images for button save option.
 
 How to use? 
+------------
 
 
-1) Just import custom controller .h file and create an instance of custom controller.
+     1) Import custom controller .h file and create an instance of custom controller.
 
-Your Login Controller.h:
+     Your Login Controller.h:
 
-@class LoginCustomComponentViewController;
+     @class LoginCustomComponentViewController;
 
-@property (nonatomic,strong)LoginCustomComponentViewController *loginComponent;
-
-
-2) Login Controller.m:
+     @property (nonatomic,strong)LoginCustomComponentViewController *loginComponent;
 
 
-#import "LoginCustomComponentViewController.h"
+      2) Login Controller.m:
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
-    [self.view addSubview:loginComponent.view];
+      #import "LoginCustomComponentViewController.h"
+
+
+     - (void)viewDidLoad
+    {
+      [super viewDidLoad];
+      loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+      [self.view addSubview:loginComponent.view];
     
-    [loginComponent.loginButton addTarget:self
-                             action:@selector(login:)
-       forControlEvents:UIControlEventTouchUpInside];
+     // To add a method call to login button: 
+      loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+      [self.view addSubview:loginComponent.view];
     
-    //Edit UI element properties as required or add more UI view on top of loginComponent
-    //Example:
-    //loginComponent.username.textColor = [UIColor redColor];
-    // Do any additional setup after loading the view from its nib.
-}
+     //Edit UI element properties as required or add more UI view on top of loginComponent
+     //Example:
+     //loginComponent.username.textColor = [UIColor redColor];
+     // Do any additional setup after loading the view from its nib.
+    }
 
 
-3) Customization:
 
-You can customize the view, labels , buttons , images as per your requirement. 
+
+
+Customization:
+------------
+
+You can customize the login view, labels , buttons , images as per your requirement. 
 
 Example:
 loginComponent.username.textColor = [UIColor redColor];
 
-4) Demo project included for reference. 
+Demo project included for reference
+------------
 
-5) Video:
+Video:
 
 http://youtu.be/c7dCGxI6ubQ
 
-6) LICENSE: 
+LICENSE: 
+================
 
 Copyright (c) 2013 Mohit Jain.
 
