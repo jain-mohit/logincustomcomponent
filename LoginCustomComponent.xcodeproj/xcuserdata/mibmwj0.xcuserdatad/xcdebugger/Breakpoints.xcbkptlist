@@ -21,24 +21,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387210107.116755"
+         timestampString = "387833808.966071"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
-         landmarkName = "-loadSavedCredentials:"
-         landmarkType = "5">
+         startingLineNumber = "202"
+         endingLineNumber = "202"
+         landmarkName = "@implementation LoginCustomComponentViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387210107.116755"
+         timestampString = "387833808.966071"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "46"
-         endingLineNumber = "46"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
+         landmarkName = "-loadSavedCredentials"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
+         timestampString = "387774284.772634"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-save:counter:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -46,14 +59,114 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387210107.116755"
+         filePath = "LoginCustomComponent/LoginComponent/Keychain/KeychainItemWrapper.m"
+         timestampString = "387832511.324783"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
-         landmarkName = "@implementation LoginCustomComponentViewController"
-         landmarkType = "3">
+         startingLineNumber = "201"
+         endingLineNumber = "201"
+         landmarkName = "-resetKeychainItem"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
+         timestampString = "387826500.111546"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-save:counter:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
+         timestampString = "387833808.966071"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "-save:counter:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
+         timestampString = "387827136.045956"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-save:counter:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/Keychain/KeychainItemWrapper.m"
+         timestampString = "387827267.588944"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
+         landmarkName = "-setObject:forKey:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/Keychain/KeychainItemWrapper.m"
+         timestampString = "387827268.327249"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
+         landmarkName = "-setObject:forKey:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/Keychain/KeychainItemWrapper.m"
+         timestampString = "387832736.47217"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "193"
+         endingLineNumber = "193"
+         landmarkName = "-removeObjectForKey:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
+         timestampString = "387833808.966071"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "174"
+         endingLineNumber = "174"
+         landmarkName = "-loadSavedCredentials"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
+   <ExceptionBreakpoints>
+      <ExceptionBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         scope = "0"
+         stopOnStyle = "0">
+      </ExceptionBreakpoint>
+   </ExceptionBreakpoints>
 </Bucket>

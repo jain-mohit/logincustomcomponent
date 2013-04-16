@@ -11,6 +11,8 @@
 		37A4F969170E1E73001C5F13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F968170E1E73001C5F13 /* Foundation.framework */; };
 		37A4F96B170E1E73001C5F13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */; };
 		37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */; };
+		FA220CB4171CC52B0029BE22 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA220CB3171CC52B0029BE22 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FA220CB8171CC59F0029BE22 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */; };
 		FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */; };
 		FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5617133DD900AB1B55 /* buttonOff.png */; };
@@ -35,6 +37,9 @@
 		37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37A4F975170E1E73001C5F13 /* LoginCustomComponentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoginCustomComponentAppDelegate.h; path = LoginCustomComponent/LoginCustomComponentAppDelegate.h; sourceTree = "<group>"; };
 		37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LoginCustomComponentAppDelegate.m; path = LoginCustomComponent/LoginCustomComponentAppDelegate.m; sourceTree = "<group>"; };
+		FA220CB3171CC52B0029BE22 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA220CB6171CC59F0029BE22 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		FA651A4017133AC900AB1B55 /* LoginControllerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginControllerProgram.h; sourceTree = "<group>"; };
 		FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerProgram.m; sourceTree = "<group>"; };
 		FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA220CB4171CC52B0029BE22 /* Security.framework in Frameworks */,
 				37A4F967170E1E73001C5F13 /* UIKit.framework in Frameworks */,
 				37A4F969170E1E73001C5F13 /* Foundation.framework in Frameworks */,
 				37A4F96B170E1E73001C5F13 /* CoreGraphics.framework in Frameworks */,
@@ -94,11 +100,21 @@
 		37A4F965170E1E73001C5F13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA220CB3171CC52B0029BE22 /* Security.framework */,
 				37A4F966170E1E73001C5F13 /* UIKit.framework */,
 				37A4F968170E1E73001C5F13 /* Foundation.framework */,
 				37A4F96A170E1E73001C5F13 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA220CB5171CC59F0029BE22 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				FA220CB6171CC59F0029BE22 /* KeychainItemWrapper.h */,
+				FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		FA651A3E171339CC00AB1B55 /* AppDelegate */ = {
@@ -125,6 +141,7 @@
 		FA651A5517133DD900AB1B55 /* LoginComponent */ = {
 			isa = PBXGroup;
 			children = (
+				FA220CB5171CC59F0029BE22 /* Keychain */,
 				FA651A5617133DD900AB1B55 /* buttonOff.png */,
 				FA651A5717133DD900AB1B55 /* buttonOn.png */,
 				FA651A5817133DD900AB1B55 /* LoginCustomComponentViewController.h */,
@@ -246,6 +263,7 @@
 				FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */,
 				FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */,
 				FA651A6417133DF900AB1B55 /* main.m in Sources */,
+				FA220CB8171CC59F0029BE22 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
