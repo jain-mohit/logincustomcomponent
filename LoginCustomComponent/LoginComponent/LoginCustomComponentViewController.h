@@ -20,8 +20,6 @@
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
 @property(nonatomic,strong)IBOutlet UILabel *errorMessage;
 @property(nonatomic, strong)KeychainItemWrapper *keychain;
-//@property(nonatomic, strong)KeychainItemWrapper *keychain_username;
-//@property(nonatomic, strong)KeychainItemWrapper *keychain_password;
 @property(nonatomic, retain)NSString *username;
 @property(nonatomic, retain)NSString *password;
 
