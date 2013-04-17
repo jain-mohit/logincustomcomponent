@@ -95,7 +95,7 @@ Demo project: included for reference
 
 Video:
 
-http://youtu.be/c7dCGxI6ubQ
+http://youtu.be/RdJ7L6aZsVY
 
 LICENSE: 
 ================
