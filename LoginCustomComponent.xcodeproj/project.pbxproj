@@ -20,14 +20,17 @@
 		FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */; };
 		FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */; };
 		FA651A6417133DF900AB1B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A6217133DF900AB1B55 /* main.m */; };
-		FA651A6917133E0B00AB1B55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */; };
-		FA651A6A17133E0B00AB1B55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6717133E0B00AB1B55 /* Default.png */; };
-		FA651A6B17133E0B00AB1B55 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A6817133E0B00AB1B55 /* Default@2x.png */; };
 		FA6EB558171CB27B00D47FDF /* Screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB553171CB27B00D47FDF /* Screen1.png */; };
 		FA6EB559171CB27B00D47FDF /* Screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB554171CB27B00D47FDF /* Screen2.png */; };
 		FA6EB55A171CB27B00D47FDF /* Screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB555171CB27B00D47FDF /* Screen3.png */; };
 		FA6EB55B171CB27B00D47FDF /* LICENSE.TXT in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB556171CB27B00D47FDF /* LICENSE.TXT */; };
 		FA6EB55C171CB27B00D47FDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB557171CB27B00D47FDF /* README.md */; };
+		FAB0FB0C171E53E70055F144 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB06171E53E70055F144 /* Default-568h@2x.png */; };
+		FAB0FB0D171E53E70055F144 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB07171E53E70055F144 /* Default.png */; };
+		FAB0FB0E171E53E70055F144 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB08171E53E70055F144 /* Default@2x.png */; };
+		FAB0FB19171E56470055F144 /* Icon-72.png.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB16171E56470055F144 /* Icon-72.png.png */; };
+		FAB0FB1A171E56470055F144 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB17171E56470055F144 /* Icon.png */; };
+		FAB0FB1B171E56470055F144 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB0FB18171E56470055F144 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,15 +53,18 @@
 		FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCustomComponentViewController.xib; sourceTree = "<group>"; };
 		FA651A6117133DF900AB1B55 /* LoginCustomComponent-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoginCustomComponent-Prefix.pch"; path = "LoginCustomComponent/LoginCustomComponent-Prefix.pch"; sourceTree = "<group>"; };
 		FA651A6217133DF900AB1B55 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LoginCustomComponent/main.m; sourceTree = "<group>"; };
-		FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "LoginCustomComponent/Default-568h@2x.png"; sourceTree = "<group>"; };
-		FA651A6717133E0B00AB1B55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = LoginCustomComponent/Default.png; sourceTree = "<group>"; };
-		FA651A6817133E0B00AB1B55 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "LoginCustomComponent/Default@2x.png"; sourceTree = "<group>"; };
 		FA6EB551171C553700D47FDF /* LoginCustomComponent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LoginCustomComponent-Info.plist"; path = "LoginCustomComponent/LoginCustomComponent-Info.plist"; sourceTree = "<group>"; };
 		FA6EB553171CB27B00D47FDF /* Screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1.png; sourceTree = "<group>"; };
 		FA6EB554171CB27B00D47FDF /* Screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen2.png; sourceTree = "<group>"; };
 		FA6EB555171CB27B00D47FDF /* Screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen3.png; sourceTree = "<group>"; };
 		FA6EB556171CB27B00D47FDF /* LICENSE.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.TXT; sourceTree = "<group>"; };
 		FA6EB557171CB27B00D47FDF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FAB0FB06171E53E70055F144 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FAB0FB07171E53E70055F144 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FAB0FB08171E53E70055F144 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FAB0FB16171E56470055F144 /* Icon-72.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png.png"; sourceTree = "<group>"; };
+		FAB0FB17171E56470055F144 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FAB0FB18171E56470055F144 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +88,8 @@
 				FA651A3F17133AC900AB1B55 /* Demo - Controller */,
 				FA651A5517133DD900AB1B55 /* LoginComponent */,
 				FA651A3E171339CC00AB1B55 /* AppDelegate */,
-				FA651A6517133DFE00AB1B55 /* Resources */,
 				FA651A5F17133DE400AB1B55 /* Supporting Files */,
+				FAB0FB03171E53E70055F144 /* Resources */,
 				37A4F965170E1E73001C5F13 /* Frameworks */,
 				37A4F964170E1E73001C5F13 /* Products */,
 			);
@@ -164,16 +170,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA651A6517133DFE00AB1B55 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FA651A6617133E0B00AB1B55 /* Default-568h@2x.png */,
-				FA651A6717133E0B00AB1B55 /* Default.png */,
-				FA651A6817133E0B00AB1B55 /* Default@2x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		FA6EB552171CB27B00D47FDF /* demo-screenshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +179,20 @@
 			);
 			name = "demo-screenshots";
 			path = "../../demo-screenshots";
+			sourceTree = "<group>";
+		};
+		FAB0FB03171E53E70055F144 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0FB16171E56470055F144 /* Icon-72.png.png */,
+				FAB0FB17171E56470055F144 /* Icon.png */,
+				FAB0FB18171E56470055F144 /* Icon@2x.png */,
+				FAB0FB06171E53E70055F144 /* Default-568h@2x.png */,
+				FAB0FB07171E53E70055F144 /* Default.png */,
+				FAB0FB08171E53E70055F144 /* Default@2x.png */,
+			);
+			name = Resources;
+			path = LoginCustomComponent/Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,14 +251,17 @@
 				FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */,
 				FA651A5C17133DD900AB1B55 /* buttonOn.png in Resources */,
 				FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */,
-				FA651A6917133E0B00AB1B55 /* Default-568h@2x.png in Resources */,
-				FA651A6A17133E0B00AB1B55 /* Default.png in Resources */,
-				FA651A6B17133E0B00AB1B55 /* Default@2x.png in Resources */,
 				FA6EB558171CB27B00D47FDF /* Screen1.png in Resources */,
 				FA6EB559171CB27B00D47FDF /* Screen2.png in Resources */,
 				FA6EB55A171CB27B00D47FDF /* Screen3.png in Resources */,
 				FA6EB55B171CB27B00D47FDF /* LICENSE.TXT in Resources */,
 				FA6EB55C171CB27B00D47FDF /* README.md in Resources */,
+				FAB0FB0C171E53E70055F144 /* Default-568h@2x.png in Resources */,
+				FAB0FB0D171E53E70055F144 /* Default.png in Resources */,
+				FAB0FB0E171E53E70055F144 /* Default@2x.png in Resources */,
+				FAB0FB19171E56470055F144 /* Icon-72.png.png in Resources */,
+				FAB0FB1A171E56470055F144 /* Icon.png in Resources */,
+				FAB0FB1B171E56470055F144 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
