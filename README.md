@@ -20,7 +20,27 @@ Relevant Files:
 You need the LoginCustomComponentViewController.h, LoginCustomComponentViewController.m and LoginCustomComponentViewController.xib
 files. You can either use buttonOff.png and buttonOn.png or use your own images for button save option.
 
-How to use? 
+Dependencies:
+-------------
+
+KeychainWrapperItem - Wrapper provided by APPLE to use Keychains. I have modified it. I have added one method to reset saved username/password. 
+
+
+KeychainItemWrapper.h
+
+    // This is new method added th this wrapper
+    -(void)removeObjectForKey:(NSString *)key;
+    
+KeychainItemWrapper.m 
+
+     // This is custom method to remove object (actually set the object to empty string)
+     -(void)removeObjectForKey:(NSString *)key
+    {
+      [keychainItemData setObject:@"" forKey:key];
+      [self writeToKeychain];
+    }
+
+Usage:
 ------------
 
 
