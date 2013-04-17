@@ -46,75 +46,53 @@
 {
     [super viewDidLoad];
     [self setup];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(IBAction)saveUsername:(id)sender {
-    [self save:@"username" counter:@"countUsername"];
-}
-
--(IBAction)savePassword:(id)sender {
-    [self save:@"password" counter:@"countPassword"];
-}
-
-// Reloads settings from Keychain/NSUserdefaults
--(void)viewWillLayoutSubviews {
+    
+    // Reloads settings from Keychain/NSUserdefaults
     [self loadSavedCredentials];
 }
 
-
-// This method is to save/unsave credentials in keychain/NSUserdefaults
+// This method is to save/unsave username in keychain/NSUserdefaults
 // Keychain: To store username/password securely
-// NSUserdefaults: To save the state of save button(s) in textfield (username and password)
--(void)save: (NSString*)field counter:(NSString*)countString {
-    
+// NSUserdefaults: To save the state of save button in username textfield 
+-(IBAction)saveUsername:(id)sender {
     NSInteger count = [[NSUserDefaults standardUserDefaults]
-                       integerForKey:countString];
-    if(!(count%2)) {
-        
-        if([countString isEqualToString:@"countUsername"]) {
-            [keychain setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
-        }
-        else if([countString isEqualToString:@"countPassword"]) {
-            [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
-        }
-        
-        if([field isEqualToString:@"username"]) {
-            [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
-            [usernameSaveButton SET_WHITECOLOR];
-        }
-        else{
-            [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
-            [passwordSaveButton SET_WHITECOLOR];
-        }
+                       integerForKey:@"countUsername"];
+    if(!(count%2))
+    {
+     [keychain setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
+     [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
+     [usernameSaveButton SET_WHITECOLOR];
     }
     else {
-        if([countString isEqualToString:@"countUsername"]) {
-            [keychain removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
-        }
-        else {
-            [keychain removeObjectForKey:(__bridge NSString *)(kSecValueData)];
-        }
+        [keychain removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
         
-        [self setButtonOff:field];
-    }
-    count++;
-    NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
-    [countDefault setInteger:count forKey:countString];
-}
-
-
-// Set the background of save button to 'off state'
--(void)setButtonOff: (NSString *)field {
-    if([field isEqualToString:@"username"]) {
+        // Set the background of save button to 'off state'
         [usernameSaveButton SET_BACKGROUND_TO_OFFSTATE];
         [usernameSaveButton SET_CUSTOMCOLOR];
     }
-    else{
+}
+
+// This method is to save/unsave password in keychain/NSUserdefaults
+// Keychain: To store username/password securely
+// NSUserdefaults: To save the state of save button in password textfield
+-(IBAction)savePassword:(id)sender {
+    NSInteger count = [[NSUserDefaults standardUserDefaults]
+                       integerForKey:@"countPassword"];
+    if(!(count%2))
+    {
+    [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+    [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
+    [passwordSaveButton SET_WHITECOLOR];
+    }
+    else {
+        [keychain removeObjectForKey:(__bridge NSString *)(kSecValueData)];
+        
+        // Set the background of save button to 'off state'
         [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
         [passwordSaveButton SET_CUSTOMCOLOR];
     }
 }
+
 
 // This is to setup the secured keychain keys, counter for saved (or unsaved) credential info -
 -(void)setup {
@@ -144,10 +122,6 @@
     [usernameTextField resignFirstResponder];
     [passwordTextField resignFirstResponder];
     return YES;
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [self loadSavedCredentials];
 }
 
 // This method is used to load the settings from the saved Keychain/NSUserdefaults
