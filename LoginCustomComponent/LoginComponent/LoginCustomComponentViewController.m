@@ -23,7 +23,7 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
- */
+*/
 
 
 #import "LoginCustomComponentViewController.h"
@@ -70,6 +70,9 @@
         [usernameSaveButton SET_BACKGROUND_TO_OFFSTATE];
         [usernameSaveButton SET_CUSTOMCOLOR];
     }
+    count++;
+    NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
+    [countDefault setInteger:count forKey:@"countUsername"];
 }
 
 // This method is to save/unsave password in keychain/NSUserdefaults
@@ -91,6 +94,10 @@
         [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
         [passwordSaveButton SET_CUSTOMCOLOR];
     }
+    
+    count++;
+    NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
+    [countDefault setInteger:count forKey:@"countPassword"];
 }
 
 
