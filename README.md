@@ -6,7 +6,7 @@ Description:
 
 LoginCustomComponent is a stand alone component which is used to save user's credentials based on user's need and choice. 
 It allows user to save or unsave username and/or password in login screen. Credentials will be retained (if saved) even when application is 
-killed and restarted. It is similar to the option of checkmark (to remember credentials) we have on websites.  
+killed and restarted. It is similar to the option of checkmark (to remember credentials) we have on websites. If you edit the saved credentials then you need to tap twice (like uncheck and check as in web) to update the credentials.  
 
 
 ![Screen1](./demo-screenshots/Screen1.png "Custom Login Screen")
