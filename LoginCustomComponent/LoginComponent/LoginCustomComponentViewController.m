@@ -36,7 +36,7 @@
     [self save:@"password" counter:@"countPassword"];
 }
 
-// Reloads settings from Keychain/NSUserdefaults 
+// Reloads settings from Keychain/NSUserdefaults
 -(void)viewWillLayoutSubviews {
     [self loadSavedCredentials];
 }
@@ -52,10 +52,10 @@
     if(!(count%2)) {
         
         if([countString isEqualToString:@"countUsername"]) {
-             [keychain setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
+            [keychain setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
         }
         else if([countString isEqualToString:@"countPassword"]) {
-              [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+            [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
         }
         
         if([field isEqualToString:@"username"]) {
@@ -101,20 +101,19 @@
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"AppLogin" accessGroup:nil];
     [keychain setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
     
-    NSInteger countUsername = [[NSUserDefaults standardUserDefaults]
-                               integerForKey:@"countUsername"];
-    if(!countUsername) {
+    // If standard default for key 'counterUsername' does not exist then create it.
+    if(!([[NSUserDefaults standardUserDefaults]
+          integerForKey:@"countUsername"])) {
         NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
         [countDefault setInteger:0 forKey:@"countUsername"];
     }
     
-    NSInteger countPassword = [[NSUserDefaults standardUserDefaults]
-                               integerForKey:@"countPassword"];
-    if(!countPassword) {
+    // If standard default for key 'counterPassword' does not exist then create it.
+    if(!([[NSUserDefaults standardUserDefaults]
+          integerForKey:@"countPassword"])) {
         NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
         [countDefault setInteger:0 forKey:@"countPassword"];
     }
-    
 }
 
 
@@ -157,8 +156,6 @@
         [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
         [passwordSaveButton SET_CUSTOMCOLOR];
     }
-
-
 }
 
 
