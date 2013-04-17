@@ -14,11 +14,19 @@ killed and restarted. It is similar to the option of checkmark (to remember cred
 ![Screen3](./demo-screenshots/Screen3.png "After tapping on save button for credentials. Screen will reatin crentials even when app is killed, restarted and/or viewed again")
 
 
-Relevant Files:
+Relevant Files to import/add to project:
 ------------
 
-You need the LoginCustomComponentViewController.h, LoginCustomComponentViewController.m and LoginCustomComponentViewController.xib
+1) You need the LoginCustomComponentViewController.h, LoginCustomComponentViewController.m and LoginCustomComponentViewController.xib
 files. You can either use buttonOff.png and buttonOn.png or use your own images for button save option.
+
+2) You need to import Security.framework.
+
+3) Add LoginComponent folder to your project which consistes of modified keychain wrapper and custom component. 
+
+  Keychain wrapper: KeychainItemWrapper.h and KeychainItemWrapper.m
+
+  Custom component: LoginCustomComponentViewController.h/.m/.xib and relevant images 
 
 Dependencies:
 -------------
