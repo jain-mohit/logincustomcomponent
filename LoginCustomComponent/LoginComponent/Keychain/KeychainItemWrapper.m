@@ -188,9 +188,10 @@ Keychain API expects as a validly constructed container class.
     return [keychainItemData objectForKey:key];
 }
 
+
+// This is custom method to remove object (actually set the object to empty string)
 -(void)removeObjectForKey:(NSString *)key
 {
-    //[keychainItemData removeObjectForKey:key];
     [keychainItemData setObject:@"" forKey:key];
     [self writeToKeychain];
 }

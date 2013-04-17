@@ -6,6 +6,10 @@
 //
 
 #import "LoginCustomComponentViewController.h"
+#define SET_BACKGROUND_TO_ONSTATE setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal
+#define SET_BACKGROUND_TO_OFFSTATE setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal
+#define SET_WHITECOLOR setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal
+#define SET_CUSTOMCOLOR setTitleColor:[UIColor colorWithRed:50.0f/255 green:79.0f/255 blue:133.0f/255 alpha:1.0f] forState:UIControlStateNormal
 
 @interface LoginCustomComponentViewController ()
 
@@ -32,11 +36,15 @@
     [self save:@"password" counter:@"countPassword"];
 }
 
-// Reloads settings from NSUserdefaults 
+// Reloads settings from Keychain/NSUserdefaults 
 -(void)viewWillLayoutSubviews {
     [self loadSavedCredentials];
 }
 
+
+// This method is to save/unsave credentials in keychain/NSUserdefaults
+// Keychain: To store username/password securely
+// NSUserdefaults: To save the state of save button(s) in textfield (username and password)
 -(void)save: (NSString*)field counter:(NSString*)countString {
     
     NSInteger count = [[NSUserDefaults standardUserDefaults]
@@ -50,14 +58,13 @@
               [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
         }
         
-        
         if([field isEqualToString:@"username"]) {
-            [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-            [usernameSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
+            [usernameSaveButton SET_WHITECOLOR];
         }
         else{
-            [passwordSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-            [passwordSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
+            [passwordSaveButton SET_WHITECOLOR];
         }
     }
     else {
@@ -73,27 +80,26 @@
     count++;
     NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
     [countDefault setInteger:count forKey:countString];
-    
 }
 
+
+// Set the background of save button to 'off state'
 -(void)setButtonOff: (NSString *)field {
     if([field isEqualToString:@"username"]) {
-        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [usernameSaveButton setTitleColor:customDarkBlue forState:UIControlStateNormal];
+        [usernameSaveButton SET_BACKGROUND_TO_OFFSTATE];
+        [usernameSaveButton SET_CUSTOMCOLOR];
     }
     else{
-        [passwordSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [passwordSaveButton setTitleColor:customDarkBlue forState:UIControlStateNormal];
+        [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
+        [passwordSaveButton SET_CUSTOMCOLOR];
     }
 }
 
-// This is to setup the userdefault keys -
+// This is to setup the secured keychain keys, counter for saved (or unsaved) credential info -
 -(void)setup {
     
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"AppLogin" accessGroup:nil];
     [keychain setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
-
-    customDarkBlue = [UIColor colorWithRed:50.0f/255 green:79.0f/255 blue:133.0f/255 alpha:1.0f];
     
     NSInteger countUsername = [[NSUserDefaults standardUserDefaults]
                                integerForKey:@"countUsername"];
@@ -123,7 +129,7 @@
     [self loadSavedCredentials];
 }
 
-// This method is used to load the settings from the saved NSUserdefaults
+// This method is used to load the settings from the saved Keychain/NSUserdefaults
 -(void)loadSavedCredentials {
     NSString *usernameDefault = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
     NSString *passwordDefault = [keychain objectForKey:(__bridge id)(kSecValueData)];
@@ -131,25 +137,25 @@
     // If username defaults exists in keychain then load otherwise load blank
     if(![usernameDefault isEqualToString:@""]) {
         usernameTextField.text = usernameDefault;
-        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-        [usernameSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
+        [usernameSaveButton SET_WHITECOLOR];
     }
     else {
         usernameTextField.text = @"";
-        [usernameSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [usernameSaveButton setTitleColor:customDarkBlue forState:UIControlStateNormal];
+        [usernameSaveButton SET_BACKGROUND_TO_OFFSTATE];
+        [usernameSaveButton SET_CUSTOMCOLOR];
     }
     
-    // If password defaults exists in keychain then load otherwise load blank
+    // If password defaults exists in keychain then load otherwise set it to empty string and button to off state
     if(![passwordDefault isEqualToString:@""]) {
         passwordTextField.text = usernameDefault;
-        [passwordSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal];
-        [passwordSaveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
+        [passwordSaveButton SET_WHITECOLOR];
     }
     else {
         passwordTextField.text = @"";
-        [passwordSaveButton setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal];
-        [passwordSaveButton setTitleColor:customDarkBlue forState:UIControlStateNormal];
+        [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
+        [passwordSaveButton SET_CUSTOMCOLOR];
     }
 
 

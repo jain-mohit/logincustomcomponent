@@ -70,6 +70,8 @@
 
 // Initializes and resets the default generic keychain item data.
 - (void)resetKeychainItem;
+
+// This is new method added th this wrapper
 -(void)removeObjectForKey:(NSString *)key;
 
 @end
