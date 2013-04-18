@@ -36,7 +36,7 @@ KeychainWrapperItem - Wrapper provided by APPLE to use Keychains. I have modifie
 
 KeychainItemWrapper.h
 
-    // This is new method added th this wrapper
+    // This is new method added to this wrapper
     -(void)removeObjectForKey:(NSString *)key;
     
 KeychainItemWrapper.m 

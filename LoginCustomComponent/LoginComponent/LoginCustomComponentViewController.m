@@ -150,7 +150,7 @@
     
     // If password defaults exists in keychain then load otherwise set it to empty string and button to off state
     if(![passwordDefault isEqualToString:@""]) {
-        passwordTextField.text = usernameDefault;
+        passwordTextField.text = passwordDefault;
         [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
         [passwordSaveButton SET_WHITECOLOR];
     }
