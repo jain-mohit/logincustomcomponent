@@ -49,7 +49,12 @@
 {
     [super viewDidLoad];
     loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+    // Mode
+    loginComponent.mode = @"1";
+    
     [self.view addSubview:loginComponent.view];
+    
+    
     
     [loginComponent.loginButton addTarget:self
                              action:@selector(login:)

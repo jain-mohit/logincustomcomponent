@@ -13,6 +13,10 @@
 		37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F976170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m */; };
 		FA220CB4171CC52B0029BE22 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA220CB3171CC52B0029BE22 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FA220CB8171CC59F0029BE22 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA4AE8CB172B26AB00F66495 /* checkbox_OFF.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4AE8C7172B26AB00F66495 /* checkbox_OFF.png */; };
+		FA4AE8CC172B26AB00F66495 /* checkbox_OFF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4AE8C8172B26AB00F66495 /* checkbox_OFF@2x.png */; };
+		FA4AE8CD172B26AB00F66495 /* checkbox_ON.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4AE8C9172B26AB00F66495 /* checkbox_ON.png */; };
+		FA4AE8CE172B26AB00F66495 /* checkbox_ON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4AE8CA172B26AB00F66495 /* checkbox_ON@2x.png */; };
 		FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */; };
 		FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */; };
 		FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5617133DD900AB1B55 /* buttonOff.png */; };
@@ -43,6 +47,10 @@
 		FA220CB3171CC52B0029BE22 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA220CB6171CC59F0029BE22 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		FA4AE8C7172B26AB00F66495 /* checkbox_OFF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_OFF.png; path = LoginCustomComponent/LoginComponent/checkbox_OFF.png; sourceTree = SOURCE_ROOT; };
+		FA4AE8C8172B26AB00F66495 /* checkbox_OFF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox_OFF@2x.png"; path = "LoginCustomComponent/LoginComponent/checkbox_OFF@2x.png"; sourceTree = SOURCE_ROOT; };
+		FA4AE8C9172B26AB00F66495 /* checkbox_ON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_ON.png; path = LoginCustomComponent/LoginComponent/checkbox_ON.png; sourceTree = SOURCE_ROOT; };
+		FA4AE8CA172B26AB00F66495 /* checkbox_ON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox_ON@2x.png"; path = "LoginCustomComponent/LoginComponent/checkbox_ON@2x.png"; sourceTree = SOURCE_ROOT; };
 		FA651A4017133AC900AB1B55 /* LoginControllerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginControllerProgram.h; sourceTree = "<group>"; };
 		FA651A4117133AC900AB1B55 /* LoginControllerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerProgram.m; sourceTree = "<group>"; };
 		FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
@@ -184,6 +192,10 @@
 		FAB0FB03171E53E70055F144 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA4AE8C7172B26AB00F66495 /* checkbox_OFF.png */,
+				FA4AE8C8172B26AB00F66495 /* checkbox_OFF@2x.png */,
+				FA4AE8C9172B26AB00F66495 /* checkbox_ON.png */,
+				FA4AE8CA172B26AB00F66495 /* checkbox_ON@2x.png */,
 				FAB0FB16171E56470055F144 /* Icon-72.png.png */,
 				FAB0FB17171E56470055F144 /* Icon.png */,
 				FAB0FB18171E56470055F144 /* Icon@2x.png */,
@@ -262,6 +274,10 @@
 				FAB0FB2517203F1D0055F144 /* Screen1.png in Resources */,
 				FAB0FB2617203F1D0055F144 /* Screen2.png in Resources */,
 				FAB0FB2717203F1D0055F144 /* Screen3.png in Resources */,
+				FA4AE8CB172B26AB00F66495 /* checkbox_OFF.png in Resources */,
+				FA4AE8CC172B26AB00F66495 /* checkbox_OFF@2x.png in Resources */,
+				FA4AE8CD172B26AB00F66495 /* checkbox_ON.png in Resources */,
+				FA4AE8CE172B26AB00F66495 /* checkbox_ON@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +360,14 @@
 		37A4F987170E1E74001C5F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohit Jain (8GS62P5N2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohit Jain (8GS62P5N2A)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginCustomComponent/LoginCustomComponent-Prefix.pch";
 				INFOPLIST_FILE = "LoginCustomComponent/LoginCustomComponent-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B62E36B0-8CAD-424D-B0C4-E7BC1A61A3A5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B62E36B0-8CAD-424D-B0C4-E7BC1A61A3A5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -355,10 +375,14 @@
 		37A4F988170E1E74001C5F13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohit Jain (8GS62P5N2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohit Jain (8GS62P5N2A)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginCustomComponent/LoginCustomComponent-Prefix.pch";
 				INFOPLIST_FILE = "LoginCustomComponent/LoginCustomComponent-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B62E36B0-8CAD-424D-B0C4-E7BC1A61A3A5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B62E36B0-8CAD-424D-B0C4-E7BC1A61A3A5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

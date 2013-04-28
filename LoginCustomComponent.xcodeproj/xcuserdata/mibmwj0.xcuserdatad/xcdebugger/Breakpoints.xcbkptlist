@@ -21,33 +21,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387901386.446129"
+         timestampString = "388704880.276924"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "227"
-         endingLineNumber = "227">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387901386.446129"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "193"
-         endingLineNumber = "193">
+         startingLineNumber = "319"
+         endingLineNumber = "319">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "LoginCustomComponent/LoginComponent/LoginCustomComponentViewController.m"
-         timestampString = "387901386.446129"
+         timestampString = "388703427.944898"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "199"
-         endingLineNumber = "199">
+         startingLineNumber = "48"
+         endingLineNumber = "48"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LoginCustomComponent/Controller/LoginControllerProgram.m"
+         timestampString = "388703512.826737"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
    <ExceptionBreakpoints>

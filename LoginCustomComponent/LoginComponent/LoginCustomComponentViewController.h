@@ -30,6 +30,7 @@
 
 @interface LoginCustomComponentViewController : UIViewController <UITextFieldDelegate> {
     UIColor *customDarkBlue;
+   
 }
 
 @property(nonatomic,strong)IBOutlet UITextField *usernameTextField;
@@ -38,10 +39,14 @@
 @property(nonatomic,strong)IBOutlet UIButton *passwordSaveButton;
 @property(nonatomic,strong)IBOutlet UIView *detailView;
 @property(nonatomic,strong)IBOutlet UIButton *loginButton;
+@property(nonatomic,strong)IBOutlet UIButton *rememberMeButton;
 @property(nonatomic,strong)IBOutlet UILabel *errorMessage;
-@property(nonatomic, strong)KeychainItemWrapper *keychain;
+@property(nonatomic,strong)IBOutlet UILabel *rememberMeLabel;
+@property(nonatomic, strong)KeychainItemWrapper *keychainForModeRememberMe;
+@property(nonatomic, strong)KeychainItemWrapper *keychainForModeSaveIndividualCredentials;
 @property(nonatomic, retain)NSString *username;
 @property(nonatomic, retain)NSString *password;
+@property(nonatomic, retain)NSString *mode;
 
 
 

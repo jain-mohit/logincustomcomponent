@@ -40,31 +40,50 @@
 @implementation LoginCustomComponentViewController
 @synthesize passwordSaveButton,usernameSaveButton,usernameTextField,passwordTextField,detailView;
 @synthesize errorMessage, loginButton;
-@synthesize keychain, username, password;
+@synthesize keychainForModeRememberMe, keychainForModeSaveIndividualCredentials, username, password,mode, rememberMeLabel, rememberMeButton;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setup];
     
-    // Reloads settings from Keychain/NSUserdefaults
-    [self loadSavedCredentials];
+    // By default mode = 1
+    if(!mode) {
+        mode = @"1";
+    }
+    
+    // Remember me mode = 1
+    if([mode isEqualToString:@"1"])
+    {
+        [self setupForRememberMe];
+        [usernameSaveButton removeFromSuperview];
+        [passwordSaveButton removeFromSuperview];
+        // Reloads settings from Keychain/NSUserdefaults
+        [self loadSavedCredentialsForRememberMe];
+    }
+     // Save individual credentials mode = 2
+    else {
+       [self setupForSaveIndividualCredential];
+        [rememberMeLabel removeFromSuperview];
+        [rememberMeButton removeFromSuperview];
+        // Reloads settings from Keychain/NSUserdefaults
+        [self loadSavedCredentials];
+    }
 }
 
 // This method is to save/unsave username in keychain/NSUserdefaults
 // Keychain: To store username/password securely
-// NSUserdefaults: To save the state of save button in username textfield 
+// NSUserdefaults: To save the state of save button in username textfield
 -(IBAction)saveUsername:(id)sender {
     NSInteger count = [[NSUserDefaults standardUserDefaults]
                        integerForKey:@"countUsername"];
     if(!(count%2))
     {
-     [keychain setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
+     [keychainForModeSaveIndividualCredentials setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
      [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
      [usernameSaveButton SET_WHITECOLOR];
     }
     else {
-        [keychain removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
+        [keychainForModeSaveIndividualCredentials removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
         
         // Set the background of save button to 'off state'
         [usernameSaveButton SET_BACKGROUND_TO_OFFSTATE];
@@ -83,12 +102,12 @@
                        integerForKey:@"countPassword"];
     if(!(count%2))
     {
-    [keychain setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+    [keychainForModeRememberMe setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
     [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
     [passwordSaveButton SET_WHITECOLOR];
     }
     else {
-        [keychain removeObjectForKey:(__bridge NSString *)(kSecValueData)];
+        [keychainForModeRememberMe removeObjectForKey:(__bridge NSString *)(kSecValueData)];
         
         // Set the background of save button to 'off state'
         [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];
@@ -101,12 +120,51 @@
 }
 
 
+-(IBAction)saveCredentials:(id)sender {
+    NSInteger count = [[NSUserDefaults standardUserDefaults]
+                       integerForKey:@"countRemember"];
+    if(!(count%2))
+    {
+        [keychainForModeRememberMe setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
+        [keychainForModeRememberMe setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+        
+        // Set the rememberMe button to 'ON state'
+        [rememberMeButton setBackgroundImage:[UIImage imageNamed:@"checkbox_ON"] forState:UIControlStateNormal];
+    }
+    else {
+        [keychainForModeRememberMe removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
+        [keychainForModeRememberMe removeObjectForKey:(__bridge NSString *)(kSecValueData)];
+        
+        // Set the rememberMe button to 'off state'
+        [rememberMeButton setBackgroundImage:[UIImage imageNamed:@"checkbox_OFF"] forState:UIControlStateNormal];
+    }
+    count++;
+    NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
+    [countDefault setInteger:count forKey:@"countRemember"];
+}
+
+
+-(void)setupForRememberMe {
+    
+    // The identifier should be unique per keychain item. The access group can be nil unless you want to share this keychain item among multiple apps
+    keychainForModeRememberMe = [[KeychainItemWrapper alloc] initWithIdentifier:@"RememberMe" accessGroup:nil];
+    [keychainForModeRememberMe setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
+    
+    // If standard default for key 'countRemember' does not exist then create it.
+    if(!([[NSUserDefaults standardUserDefaults]
+          integerForKey:@"countRemember"])) {
+        NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
+        [countDefault setInteger:0 forKey:@"countRemember"];
+    }
+    
+}
+
 // This is to setup the secured keychain keys, counter for saved (or unsaved) credential info -
--(void)setup {
+-(void)setupForSaveIndividualCredential {
     
     // The identifier should be unique per keychain item. The access group can be nil unless you want to share this keychain item among multiple apps 
-    keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"AppLogin" accessGroup:nil];
-    [keychain setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
+    keychainForModeSaveIndividualCredentials = [[KeychainItemWrapper alloc] initWithIdentifier:@"AppLogin" accessGroup:nil];
+    [keychainForModeSaveIndividualCredentials setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
     
     // If standard default for key 'counterUsername' does not exist then create it.
     if(!([[NSUserDefaults standardUserDefaults]
@@ -133,8 +191,8 @@
 
 // This method is used to load the settings from the saved Keychain/NSUserdefaults
 -(void)loadSavedCredentials {
-    NSString *usernameDefault = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
-    NSString *passwordDefault = [keychain objectForKey:(__bridge id)(kSecValueData)];
+    NSString *usernameDefault = [keychainForModeSaveIndividualCredentials objectForKey:(__bridge id)(kSecAttrAccount)];
+    NSString *passwordDefault = [keychainForModeSaveIndividualCredentials objectForKey:(__bridge id)(kSecValueData)];
     
     // If username defaults exists in keychain then load otherwise load blank
     if(![usernameDefault isEqualToString:@""]) {
@@ -161,6 +219,24 @@
     }
 }
 
+
+// This method is used to load the settings from the saved Keychain/NSUserdefaults
+-(void)loadSavedCredentialsForRememberMe {
+    NSString *usernameDefault = [keychainForModeRememberMe objectForKey:(__bridge id)(kSecAttrAccount)];
+    NSString *passwordDefault = [keychainForModeRememberMe objectForKey:(__bridge id)(kSecValueData)];
+    
+    // If username defaults and password defaults exists in keychain then load otherwise load blank
+    if((![usernameDefault isEqualToString:@""]) && (![passwordDefault isEqualToString:@""])) {
+        usernameTextField.text = usernameDefault;
+         passwordTextField.text = passwordDefault;
+        [rememberMeButton setBackgroundImage:[UIImage imageNamed:@"checkbox_ON"] forState:UIControlStateNormal];
+    }
+    else {
+        usernameTextField.text = @"";
+        passwordTextField.text = @"";
+        [rememberMeButton setBackgroundImage:[UIImage imageNamed:@"checkbox_OFF"] forState:UIControlStateNormal];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
