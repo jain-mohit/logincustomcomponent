@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">11G63b</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1138.51</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -169,7 +169,7 @@
 					<object class="IBUIButton" id="836155512">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{229, 263}, {56, 27}}</string>
+						<string key="NSFrame">{{229, 234}, {56, 27}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -226,7 +226,7 @@
 					<object class="IBUILabel" id="571269673">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{83, 223}, {115, 21}}</string>
+						<string key="NSFrame">{{71, 222}, {94, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="636883921"/>
@@ -262,7 +262,7 @@
 					<object class="IBUIButton" id="296747436">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{41, 225}, {17, 17}}</string>
+						<string key="NSFrame">{{41, 225}, {16, 16}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="571269673"/>
@@ -464,11 +464,11 @@
 							<reference ref="503464030"/>
 							<reference ref="67636538"/>
 							<reference ref="153674438"/>
-							<reference ref="636883921"/>
 							<reference ref="768735953"/>
 							<reference ref="836155512"/>
-							<reference ref="571269673"/>
 							<reference ref="296747436"/>
+							<reference ref="636883921"/>
+							<reference ref="571269673"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
