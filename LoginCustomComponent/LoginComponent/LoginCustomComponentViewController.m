@@ -102,12 +102,12 @@
                        integerForKey:@"countPassword"];
     if(!(count%2))
     {
-    [keychainForModeRememberMe setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+    [keychainForModeSaveIndividualCredentials setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
     [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
     [passwordSaveButton SET_WHITECOLOR];
     }
     else {
-        [keychainForModeRememberMe removeObjectForKey:(__bridge NSString *)(kSecValueData)];
+        [keychainForModeSaveIndividualCredentials removeObjectForKey:(__bridge NSString *)(kSecValueData)];
         
         // Set the background of save button to 'off state'
         [passwordSaveButton SET_BACKGROUND_TO_OFFSTATE];

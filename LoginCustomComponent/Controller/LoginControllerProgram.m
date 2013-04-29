@@ -54,7 +54,7 @@
     // Optional: Change this mode to string "2" for saving individual login credentials.
     // loginComponent.mode = @"2";
    
-    loginComponent.mode = @"1";
+    loginComponent.mode = @"2";
     
     [self.view addSubview:loginComponent.view];
     
