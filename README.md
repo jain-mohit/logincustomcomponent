@@ -120,8 +120,7 @@ Demo project: included for reference
 
 Video:
 
-
-Mode 2: Save Credentials: http://youtu.be/RdJ7L6aZsVY
+http://youtu.be/cqMNTahQc8Y
 
 LICENSE: 
 ================
