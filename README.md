@@ -8,10 +8,25 @@ LoginCustomComponent is a stand alone component which is used to save user's cre
 It allows user to save or unsave username and/or password in login screen. Credentials will be retained (if saved) even when application is 
 killed and restarted. It is similar to the option of checkmark (to remember credentials) we have on websites. If you edit the saved credentials then you need to tap twice (like uncheck and check as in web) to update the credentials.  
 
+This component works in 2 modes:
 
-![Screen1](./demo-screenshots/Screen1.png "Custom Login Screen")
-![Screen2](./demo-screenshots/Screen2.png "After entering credentials")
-![Screen3](./demo-screenshots/Screen3.png "After tapping on save button for credentials. Screen will reatin crentials even when app is killed, restarted and/or viewed again")
+1) Mode 1: Remember Me
+
+User's credentials will be saved by clicking on checkbox. By unchecking it, user credentials will be reseted. 
+
+2) Mode 2: Save Credentials 
+
+User's credentials will be saved by clicking individually on buttons in textfield for username and password.
+
+Mode 1: Remember Me
+![Screen1](./demo-screenshots/RememberMe1.png "Custom Login Screen - Mode 1: Remember Me")
+![Screen2](./demo-screenshots/RememberMe2.png " After entering credentials and tapping on remember me checkbox for credentials. Screen will retain credentials even when app is killed, restarted and/or viewed again")
+
+
+Mode 2: Save Credentials
+![Screen3](./demo-screenshots/Screen1.png "Custom Login Screen - Mode 2: Save Credentials")
+![Screen4](./demo-screenshots/Screen2.png "After entering credentials")
+![Screen5](./demo-screenshots/Screen3.png "After tapping on save button for credentials. Screen will retain credentials even when app is killed, restarted and/or viewed again")
 
 
 Relevant Files to import/add to project:

@@ -49,7 +49,11 @@
 {
     [super viewDidLoad];
     loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
-    // Mode
+    
+    // Default Mode is 'Remember Me'
+    // Optional: Change this mode to string "2" for saving individual login credentials.
+    // loginComponent.mode = @"2";
+   
     loginComponent.mode = @"1";
     
     [self.view addSubview:loginComponent.view];
