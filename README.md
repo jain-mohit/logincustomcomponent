@@ -66,6 +66,17 @@ KeychainItemWrapper.m
       [keychainItemData setObject:@"" forKey:key];
       [self writeToKeychain];
     }
+    
+        You also need to import Security.framework. Also, ff you are using ARC then you need to fix auto release code in
+    class KeychainItemWrapper.
+
+	Go to your application target >> Build Phases
+
+	Click on  KeychainWrapper and add -fno-objc-arc.
+
+	See this link for more info: 
+	http://stackoverflow.com/questions/6646052/how-can-i-disable-arc-for-a-single-file-in-a-project
+	
 
 Usage:
 ------------
