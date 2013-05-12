@@ -1,55 +1,52 @@
 //
-//  LoginCustomComponentViewController.m
+//  CustomComponent.m
+//  LoginCustomComponent
 //
-//  Created by Mohit Jain on 4/4/13.
+//  Created by Mohit Jain on 5/11/13.
+//  Copyright (c) 2013 Mohit Jain. All rights reserved.
+//
 
-/*
- Copyright (c) 2013 Mohit Jain. All rights reserved.
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
-*/
-
-
-#import "LoginCustomComponentViewController.h"
+#import "CustomComponent.h"
 #define SET_BACKGROUND_TO_ONSTATE setBackgroundImage:[UIImage imageNamed:@"buttonOn.png"] forState:UIControlStateNormal
 #define SET_BACKGROUND_TO_OFFSTATE setBackgroundImage:[UIImage imageNamed:@"buttonOff.png"] forState:UIControlStateNormal
 #define SET_WHITECOLOR setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal
 #define SET_CUSTOMCOLOR setTitleColor:[UIColor colorWithRed:50.0f/255 green:79.0f/255 blue:133.0f/255 alpha:1.0f] forState:UIControlStateNormal
 
-@interface LoginCustomComponentViewController ()
 
-
-@end
-
-@implementation LoginCustomComponentViewController
+@implementation CustomComponent
 @synthesize passwordSaveButton,usernameSaveButton,usernameTextField,passwordTextField,detailView;
 @synthesize errorMessage, loginButton;
-@synthesize keychainForModeRememberMe, keychainForModeSaveIndividualCredentials, username, password,mode, rememberMeLabel, rememberMeButton;
+@synthesize keychainForModeRememberMe, keychainForModeSaveIndividualCredentials, username, password,mode, rememberMeLabel, rememberMeButton, customView;
 
-- (void)viewDidLoad
+
+
+
+
+- (id)initWithFrame:(CGRect)frame
 {
-    [super viewDidLoad];
-    
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        NSArray *topLevelObjs = nil;
+        topLevelObjs = [[NSBundle mainBundle] loadNibNamed:@"CustomComponent" owner:self options:nil];
+        [self addSubview: [topLevelObjs objectAtIndex:0]];
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup
+{
     // By default mode = 1
     if(!mode) {
         mode = @"1";
     }
+    
+    // Default Mode is 'Remember Me'
+    // Optional: Change this mode to string "2" for saving individual login credentials.
+    // loginComponent.mode = @"2";
+    
+     // mode = @"2";
     
     // Remember me mode = 1
     if([mode isEqualToString:@"1"])
@@ -60,9 +57,9 @@
         // Reloads settings from Keychain/NSUserdefaults
         [self loadSavedCredentialsForRememberMe];
     }
-     // Save individual credentials mode = 2
+    // Save individual credentials mode = 2
     else {
-       [self setupForSaveIndividualCredential];
+        [self setupForSaveIndividualCredential];
         [rememberMeLabel removeFromSuperview];
         [rememberMeButton removeFromSuperview];
         // Reloads settings from Keychain/NSUserdefaults
@@ -78,9 +75,9 @@
                        integerForKey:@"countUsername"];
     if(!(count%2))
     {
-     [keychainForModeSaveIndividualCredentials setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
-     [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
-     [usernameSaveButton SET_WHITECOLOR];
+        [keychainForModeSaveIndividualCredentials setObject:usernameTextField.text forKey:(__bridge id)(kSecAttrAccount)];
+        [usernameSaveButton SET_BACKGROUND_TO_ONSTATE];
+        [usernameSaveButton SET_WHITECOLOR];
     }
     else {
         [keychainForModeSaveIndividualCredentials removeObjectForKey:(__bridge NSString *)(kSecAttrAccount)];
@@ -102,9 +99,9 @@
                        integerForKey:@"countPassword"];
     if(!(count%2))
     {
-    [keychainForModeSaveIndividualCredentials setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
-    [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
-    [passwordSaveButton SET_WHITECOLOR];
+        [keychainForModeSaveIndividualCredentials setObject:passwordTextField.text forKey:(__bridge id)(kSecValueData)];
+        [passwordSaveButton SET_BACKGROUND_TO_ONSTATE];
+        [passwordSaveButton SET_WHITECOLOR];
     }
     else {
         [keychainForModeSaveIndividualCredentials removeObjectForKey:(__bridge NSString *)(kSecValueData)];
@@ -143,6 +140,11 @@
     [countDefault setInteger:count forKey:@"countRemember"];
 }
 
+//-(void)setRememberMeButton:(UIButton *)rememberMeButton {
+//    [self setup];
+//}
+
+
 
 -(void)setupForRememberMe {
     
@@ -162,7 +164,7 @@
 // This is to setup the secured keychain keys, counter for saved (or unsaved) credential info -
 -(void)setupForSaveIndividualCredential {
     
-    // The identifier should be unique per keychain item. The access group can be nil unless you want to share this keychain item among multiple apps 
+    // The identifier should be unique per keychain item. The access group can be nil unless you want to share this keychain item among multiple apps
     keychainForModeSaveIndividualCredentials = [[KeychainItemWrapper alloc] initWithIdentifier:@"AppLogin" accessGroup:nil];
     [keychainForModeSaveIndividualCredentials setObject:(__bridge id)(kSecAttrAccessibleWhenUnlocked) forKey:(__bridge id)(kSecAttrAccessible)];
     
@@ -228,7 +230,7 @@
     // If username defaults and password defaults exists in keychain then load otherwise load blank
     if((![usernameDefault isEqualToString:@""]) && (![passwordDefault isEqualToString:@""])) {
         usernameTextField.text = usernameDefault;
-         passwordTextField.text = passwordDefault;
+        passwordTextField.text = passwordDefault;
         [rememberMeButton setBackgroundImage:[UIImage imageNamed:@"checkbox_ON"] forState:UIControlStateNormal];
     }
     else {
@@ -238,10 +240,8 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 @end
+

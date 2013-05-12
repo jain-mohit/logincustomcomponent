@@ -8,14 +8,13 @@
 
 #import "LoginControllerProgram.h"
 #import "LoginCustomComponentAppDelegate.h"
-#import "LoginCustomComponentViewController.h"
 
 @interface LoginControllerProgram ()
 
 @end
 
 @implementation LoginControllerProgram
-@synthesize loginComponent,detailView;
+@synthesize detailView, loginCustomComponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,16 +25,17 @@
     return self;
 }
 
--(void)login:(id)sender {
+-(IBAction)login:(id)sender {
     
     // Perform login functions
     
     //Validation
-    if([loginComponent.usernameTextField.text isEqualToString:@""] || [loginComponent.passwordTextField.text isEqualToString:@""]) {
-        loginComponent.errorMessage.text = @"You cannot log in with the null credentials.";
+    if([self.loginCustomComponent.usernameTextField.text isEqualToString:@""] || [self.loginCustomComponent.passwordTextField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message: @"You cannot log in with the null credentials." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
     }
     else {
-    [loginComponent.view addSubview:detailView];
+    [self.view addSubview:detailView];
     }
 }
 
@@ -48,26 +48,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+
+  //  self.loginCustomComponent.rememberMeLabel.text = @"Remember";
+    loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
     
-    // Default Mode is 'Remember Me'
-    // Optional: Change this mode to string "2" for saving individual login credentials.
-    // loginComponent.mode = @"2";
-   
-    loginComponent.mode = @"2";
-    
-    [self.view addSubview:loginComponent.view];
-    
-    
-    
-    [loginComponent.loginButton addTarget:self
-                             action:@selector(login:)
-       forControlEvents:UIControlEventTouchUpInside];
-    
-    //Edit UI element properties as required or add more UI view on top of loginComponent
+    //Edit UI element properties as required
     //Example:
-    //loginComponent.username.textColor = [UIColor redColor];
-    // Do any additional setup after loading the view from its nib.
+    //self.loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
+    //self.loginCustomComponent.rememberMeLabel.text = @"Remember";
+    
+
+    
+    
+    
+    [self.view addSubview:loginCustomComponent];
+    
 }
 
 

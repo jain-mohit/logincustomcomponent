@@ -16,6 +16,8 @@
 		37ACE79E172DFE6C008DFAE3 /* Screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ACE799172DFE6C008DFAE3 /* Screen3.png */; };
 		37ACE79F172DFE6C008DFAE3 /* Screen4.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ACE79A172DFE6C008DFAE3 /* Screen4.png */; };
 		37ACE7A0172DFE6C008DFAE3 /* Screen5.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ACE79B172DFE6C008DFAE3 /* Screen5.png */; };
+		37ACE7AF173F3C19008DFAE3 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ACE7AE173F3C19008DFAE3 /* CustomComponent.m */; };
+		37ACE7B1173F3C33008DFAE3 /* CustomComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37ACE7B0173F3C33008DFAE3 /* CustomComponent.xib */; };
 		FA220CB4171CC52B0029BE22 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA220CB3171CC52B0029BE22 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FA220CB8171CC59F0029BE22 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FA4AE8CB172B26AB00F66495 /* checkbox_OFF.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4AE8C7172B26AB00F66495 /* checkbox_OFF.png */; };
@@ -26,8 +28,6 @@
 		FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */; };
 		FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5617133DD900AB1B55 /* buttonOff.png */; };
 		FA651A5C17133DD900AB1B55 /* buttonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5717133DD900AB1B55 /* buttonOn.png */; };
-		FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */; };
-		FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */; };
 		FA651A6417133DF900AB1B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA651A6217133DF900AB1B55 /* main.m */; };
 		FA6EB55B171CB27B00D47FDF /* LICENSE.TXT in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB556171CB27B00D47FDF /* LICENSE.TXT */; };
 		FA6EB55C171CB27B00D47FDF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA6EB557171CB27B00D47FDF /* README.md */; };
@@ -51,6 +51,9 @@
 		37ACE799172DFE6C008DFAE3 /* Screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen3.png; sourceTree = "<group>"; };
 		37ACE79A172DFE6C008DFAE3 /* Screen4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen4.png; sourceTree = "<group>"; };
 		37ACE79B172DFE6C008DFAE3 /* Screen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen5.png; sourceTree = "<group>"; };
+		37ACE7AD173F3C19008DFAE3 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomComponent.h; path = ../Controller/CustomComponent.h; sourceTree = "<group>"; };
+		37ACE7AE173F3C19008DFAE3 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomComponent.m; path = ../Controller/CustomComponent.m; sourceTree = "<group>"; };
+		37ACE7B0173F3C33008DFAE3 /* CustomComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomComponent.xib; path = ../Controller/CustomComponent.xib; sourceTree = "<group>"; };
 		FA220CB3171CC52B0029BE22 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA220CB6171CC59F0029BE22 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		FA220CB7171CC59F0029BE22 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
@@ -63,9 +66,6 @@
 		FA651A4217133AC900AB1B55 /* LoginControllerProgram.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginControllerProgram.xib; sourceTree = "<group>"; };
 		FA651A5617133DD900AB1B55 /* buttonOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOff.png; sourceTree = "<group>"; };
 		FA651A5717133DD900AB1B55 /* buttonOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonOn.png; sourceTree = "<group>"; };
-		FA651A5817133DD900AB1B55 /* LoginCustomComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCustomComponentViewController.h; sourceTree = "<group>"; };
-		FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCustomComponentViewController.m; sourceTree = "<group>"; };
-		FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCustomComponentViewController.xib; sourceTree = "<group>"; };
 		FA651A6117133DF900AB1B55 /* LoginCustomComponent-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoginCustomComponent-Prefix.pch"; path = "LoginCustomComponent/LoginCustomComponent-Prefix.pch"; sourceTree = "<group>"; };
 		FA651A6217133DF900AB1B55 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LoginCustomComponent/main.m; sourceTree = "<group>"; };
 		FA6EB551171C553700D47FDF /* LoginCustomComponent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LoginCustomComponent-Info.plist"; path = "LoginCustomComponent/LoginCustomComponent-Info.plist"; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 				FA220CB5171CC59F0029BE22 /* Keychain */,
 				FA651A5617133DD900AB1B55 /* buttonOff.png */,
 				FA651A5717133DD900AB1B55 /* buttonOn.png */,
-				FA651A5817133DD900AB1B55 /* LoginCustomComponentViewController.h */,
-				FA651A5917133DD900AB1B55 /* LoginCustomComponentViewController.m */,
-				FA651A5A17133DD900AB1B55 /* LoginCustomComponentViewController.xib */,
+				37ACE7AD173F3C19008DFAE3 /* CustomComponent.h */,
+				37ACE7AE173F3C19008DFAE3 /* CustomComponent.m */,
+				37ACE7B0173F3C33008DFAE3 /* CustomComponent.xib */,
 			);
 			name = LoginComponent;
 			path = LoginCustomComponent/LoginComponent;
@@ -268,7 +268,6 @@
 				FA651A4817133AC900AB1B55 /* LoginControllerProgram.xib in Resources */,
 				FA651A5B17133DD900AB1B55 /* buttonOff.png in Resources */,
 				FA651A5C17133DD900AB1B55 /* buttonOn.png in Resources */,
-				FA651A5E17133DD900AB1B55 /* LoginCustomComponentViewController.xib in Resources */,
 				FA6EB55B171CB27B00D47FDF /* LICENSE.TXT in Resources */,
 				FA6EB55C171CB27B00D47FDF /* README.md in Resources */,
 				FAB0FB0C171E53E70055F144 /* Default-568h@2x.png in Resources */,
@@ -286,6 +285,7 @@
 				37ACE79E172DFE6C008DFAE3 /* Screen3.png in Resources */,
 				37ACE79F172DFE6C008DFAE3 /* Screen4.png in Resources */,
 				37ACE7A0172DFE6C008DFAE3 /* Screen5.png in Resources */,
+				37ACE7B1173F3C33008DFAE3 /* CustomComponent.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +298,9 @@
 			files = (
 				37A4F977170E1E73001C5F13 /* LoginCustomComponentAppDelegate.m in Sources */,
 				FA651A4717133AC900AB1B55 /* LoginControllerProgram.m in Sources */,
-				FA651A5D17133DD900AB1B55 /* LoginCustomComponentViewController.m in Sources */,
 				FA651A6417133DF900AB1B55 /* main.m in Sources */,
 				FA220CB8171CC59F0029BE22 /* KeychainItemWrapper.m in Sources */,
+				37ACE7AF173F3C19008DFAE3 /* CustomComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
