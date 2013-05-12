@@ -95,19 +95,19 @@ Usage:
       #import "LoginCustomComponentViewController.h"
 
     - (void)viewDidLoad
-{
-    [super viewDidLoad];
+    {
+      [super viewDidLoad];
     
-    loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
+      loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
     
-    //Edit UI element properties as required
-    //Example:
-    //loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
-    //loginCustomComponent.rememberMeLabel.text = @"Remember";
+      //Edit UI element properties as required
+      //Example:
+      //loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
+      //loginCustomComponent.rememberMeLabel.text = @"Remember";
     
-    [self.view addSubview:loginCustomComponent];
+      [self.view addSubview:loginCustomComponent];
     
-}
+    }
 
 
 Mode 2: Save Credentials:
