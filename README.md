@@ -36,7 +36,7 @@ Mode 2: Save Credentials
 Relevant Files to import/add to project:
 ------------
 
-1) You need the LoginCustomComponentViewController.h, LoginCustomComponentViewController.m and LoginCustomComponentViewController.xib
+1) You need the CustomComponent.h, CustomComponent.m and CustomComponent.xib
 files. You can either use buttonOff.png and buttonOn.png or use your own images for button save option.
 
 2) You need to import Security.framework.
@@ -45,7 +45,7 @@ files. You can either use buttonOff.png and buttonOn.png or use your own images 
 
   Keychain wrapper: KeychainItemWrapper.h and KeychainItemWrapper.m
 
-  Custom component: LoginCustomComponentViewController.h/.m/.xib and relevant images 
+  Custom component: CustomComponent.h/.m/.xib and relevant images 
 
 Dependencies:
 -------------
@@ -95,36 +95,69 @@ Usage:
       #import "LoginCustomComponentViewController.h"
 
     - (void)viewDidLoad
-    {
-      [super viewDidLoad];
-      loginComponent= [[LoginCustomComponentViewController alloc]initWithNibName:@"LoginCustomComponentViewController" bundle:nil];
+{
+    [super viewDidLoad];
     
-      // Default Mode is 'Remember Me'
-      // Optional: Change this mode to string "2" for saving individual login credentials.
-      // loginComponent.mode = @"2";
-   
-      loginComponent.mode = @"1";
+    loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
     
-      [self.view addSubview:loginComponent.view];
+    //Edit UI element properties as required
+    //Example:
+    //loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
+    //loginCustomComponent.rememberMeLabel.text = @"Remember";
     
-      [loginComponent.loginButton addTarget:self
-                             action:@selector(login:)
-       forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:loginCustomComponent];
     
-      // Edit UI element properties as required or add more UI view on top of loginComponent
-      // Example:
-      // loginComponent.username.textColor = [UIColor redColor];
-      // Do any additional setup after loading the view from its nib.
-    }
+}
 
+
+Mode 2: Save Credentials:
+
+You need to set mode to string "2" in setup method of CustomComponent.m
+mode = @"2" 
+
+See this:
+
+    // CustomComponent.m
+
+    - (void)setup
+     {
+       // By default mode = 1
+       if(!mode) {
+          mode = @"1";
+      }
+    
+     // Default Mode is 'Remember Me'
+     // Optional: Change this mode to string "2" for saving individual login credentials.
+    
+     // mode = @"2";
+    
+    // Remember me mode = 1
+    if([mode isEqualToString:@"1"])
+    {
+        [self setupForRememberMe];
+        [usernameSaveButton removeFromSuperview];
+        [passwordSaveButton removeFromSuperview];
+        // Reloads settings from Keychain/NSUserdefaults
+        [self loadSavedCredentialsForRememberMe];
+    }
+    // Save individual credentials mode = 2
+    else {
+        [self setupForSaveIndividualCredential];
+        [rememberMeLabel removeFromSuperview];
+        [rememberMeButton removeFromSuperview];
+        // Reloads settings from Keychain/NSUserdefaults
+        [self loadSavedCredentials];
+      }
+    }
 
 Customization:
 ------------
 
-    You can customize the login view, labels , buttons , images as per your requirement. 
+    You can customize the  view, labels , buttons , images as per your requirement. 
 
     Example:
-    loginComponent.username.textColor = [UIColor redColor];
+    loginCustomComponent.username.textColor = [UIColor redColor];
+    loginCustomComponent.rememberMeLabel.text = @"Remember";
 
 Demo project: included for reference
 ------------
@@ -156,5 +189,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+NOTE:
+===============
 
+If you use this component, please send me an email on majainmail@gmail.com. 
+I will be glad to hear that. 
 
+ 

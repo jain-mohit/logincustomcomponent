@@ -44,7 +44,6 @@
     
     // Default Mode is 'Remember Me'
     // Optional: Change this mode to string "2" for saving individual login credentials.
-    // loginComponent.mode = @"2";
     
      // mode = @"2";
     
@@ -139,11 +138,6 @@
     NSUserDefaults *countDefault = [NSUserDefaults standardUserDefaults];
     [countDefault setInteger:count forKey:@"countRemember"];
 }
-
-//-(void)setRememberMeButton:(UIButton *)rememberMeButton {
-//    [self setup];
-//}
-
 
 
 -(void)setupForRememberMe {

@@ -48,18 +48,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-  //  self.loginCustomComponent.rememberMeLabel.text = @"Remember";
+    
     loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
     
     //Edit UI element properties as required
     //Example:
-    //self.loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
-    //self.loginCustomComponent.rememberMeLabel.text = @"Remember";
-    
-
-    
-    
+    //loginCustomComponent.usernameTextField.textColor = [UIColor redColor];
+    //loginCustomComponent.rememberMeLabel.text = @"Remember";
     
     [self.view addSubview:loginCustomComponent];
     
