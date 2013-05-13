@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
     
-    loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 50, 280, 129)];
+    loginCustomComponent = [[CustomComponent alloc] initWithFrame:CGRectMake(30, 120, 280, 129)];
     
     //Edit UI element properties as required
     //Example:
